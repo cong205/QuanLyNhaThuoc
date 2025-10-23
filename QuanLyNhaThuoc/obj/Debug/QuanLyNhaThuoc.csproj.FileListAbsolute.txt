@@ -1,0 +1,11 @@
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe.config
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.pdb
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.AssemblyReference.cache
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmMain.resources
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.Properties.Resources.resources
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.GenerateResource.cache
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
+D:\Lap_Trinh_Truc_Quan\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe.config
