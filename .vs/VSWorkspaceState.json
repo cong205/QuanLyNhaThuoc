@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\QuanLyNhaThuoc",
+    "\\QuanLyNhaThuoc\\Classes"
   ],
-  "SelectedNode": "\\QuanLyNhaThuoc.sln",
+  "SelectedNode": "\\QuanLyNhaThuoc\\Classes\\DataProcesser.cs",
   "PreviewInSolutionExplorer": false
 }

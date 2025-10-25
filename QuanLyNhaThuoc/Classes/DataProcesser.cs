@@ -11,7 +11,7 @@ namespace QuanLyNhaThuoc.Classes
 
     internal class DataProcesser
     {
-        string strConnect = @"Data Source=.\SQLEXPRESS;Initial Catalog=QLNhaThuoc;Integrated Security=True";
+        string strConnect = @"Data Source=.;Initial Catalog=QLNhaThuoc;Integrated Security=True";
         SqlConnection sqlConnect = null;
 
         // Mở kết nối
