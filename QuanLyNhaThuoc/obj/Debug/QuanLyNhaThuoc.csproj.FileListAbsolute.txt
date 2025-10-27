@@ -1,0 +1,15 @@
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe.config
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.pdb
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.AssemblyReference.cache
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmDonVi.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmKhachHang.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmLoaiThuoc.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmThuoc.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmMain.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmNhanVien.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.Properties.Resources.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.GenerateResource.cache
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
