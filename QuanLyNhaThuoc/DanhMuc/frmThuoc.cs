@@ -16,14 +16,11 @@ namespace QuanLyNhaThuoc.DanhMuc
     public partial class frmThuoc : Form
     {
         Classes.DataProcesser dp = new Classes.DataProcesser();
-        private readonly string imagesFolder = Path.Combine(Application.StartupPath, "Images");
-
+        string fileAnh = "";
 
         public frmThuoc()
         {
             InitializeComponent();
-            if (!Directory.Exists(imagesFolder))
-                Directory.CreateDirectory(imagesFolder);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,6 +71,12 @@ namespace QuanLyNhaThuoc.DanhMuc
                 return;
             }
 
+            if (!decimal.TryParse(txtGiaNhap.Text, out decimal giaNhap) || !decimal.TryParse(txtGiaBan.Text, out decimal giaBan))
+            {
+                MessageBox.Show("Giá nhập và giá bán phải là số!");
+                return;
+            }
+
             string trangThai = rdoConHang.Checked ? "Còn hàng" : "Hết hàng";
 
             string sqlCheck = $"SELECT * FROM tThuoc WHERE MaThuoc='{txtMaThuoc.Text}'";
@@ -82,35 +85,52 @@ namespace QuanLyNhaThuoc.DanhMuc
             if (dt.Rows.Count > 0)
             {
                 string sqlUpdate = $@"
-                    UPDATE tThuoc SET 
-                        TenThuoc = N'{txtTenThuoc.Text}',
-                        MaLoaiThuoc = '{cboLoaiThuoc.SelectedValue}',
-                        MaDonVi = '{cboDonVi.SelectedValue}',
-                        TrangThai = N'{trangThai}',
-                        CongDung = N'{txtCongDung.Text}',
-                        GiaNhap = {txtGiaNhap.Text},
-                        GiaBan = {txtGiaBan.Text}
-                    WHERE MaThuoc = '{txtMaThuoc.Text}'";
+            UPDATE tThuoc SET 
+                TenThuoc = N'{txtTenThuoc.Text}',
+                MaLoaiThuoc = '{cboLoaiThuoc.SelectedValue}',
+                MaDonVi = '{cboDonVi.SelectedValue}',
+                TrangThai = N'{trangThai}',
+                CongDung = N'{txtCongDung.Text}',
+                GiaNhap = {giaNhap},
+                GiaBan = {giaBan},
+                Anh = '{fileAnh}'
+            WHERE MaThuoc = '{txtMaThuoc.Text}'";
                 dp.ExecuteNonQuery(sqlUpdate);
                 MessageBox.Show("Đã cập nhật thuốc!");
             }
             else
             {
                 string sqlInsert = $@"
-                    INSERT INTO tThuoc (MaThuoc, TenThuoc, MaLoaiThuoc, MaDonVi, TrangThai, CongDung, GiaNhap, GiaBan)
-                    VALUES ('{txtMaThuoc.Text}', N'{txtTenThuoc.Text}', '{cboLoaiThuoc.SelectedValue}', 
-                            '{cboDonVi.SelectedValue}', N'{trangThai}', N'{txtCongDung.Text}', 
-                            {txtGiaNhap.Text}, {txtGiaBan.Text})";
+            INSERT INTO tThuoc (MaThuoc, TenThuoc, MaLoaiThuoc, MaDonVi, TrangThai, CongDung, GiaNhap, GiaBan, Anh)
+            VALUES ('{txtMaThuoc.Text}', N'{txtTenThuoc.Text}', '{cboLoaiThuoc.SelectedValue}', 
+                    '{cboDonVi.SelectedValue}', N'{trangThai}', N'{txtCongDung.Text}', 
+                    {giaNhap}, {giaBan}, '{fileAnh}')";
                 dp.ExecuteNonQuery(sqlInsert);
+
+                // Tạo mã lô mới
+                string sqlGetMax = "SELECT TOP 1 MaLo FROM tLoThuoc ORDER BY MaLo DESC";
+                DataTable dtMax = dp.GetDataTable(sqlGetMax);
+
+                string newMaLo = "L001";
+                if (dtMax.Rows.Count > 0)
+                {
+                    string lastMaLo = dtMax.Rows[0]["MaLo"].ToString();
+                    int so = int.Parse(lastMaLo.Substring(1)) + 1;
+                    newMaLo = "L" + so.ToString("D3");
+                }
+
+                // Thêm vào tLoThuoc
+                string sqlInsertLo = $@"
+            INSERT INTO tLoThuoc (MaLo, MaThuoc, SoLuongTon, NgaySanXuat, HanSuDung)
+            VALUES ('{newMaLo}', '{txtMaThuoc.Text}', {txtSoLuongTon.Text}, 
+                    '{dtpNgaySX.Value:yyyy-MM-dd}', '{dtpHanSD.Value:yyyy-MM-dd}')";
+                dp.ExecuteNonQuery(sqlInsertLo);
+
                 MessageBox.Show("Đã thêm thuốc mới!");
             }
-
             LoadData();
-            ResetValue();
-            btnLuu.Enabled = false;
-            btnSua.Enabled = false;
-            btnXoa.Enabled = false;
         }
+
 
         private void btnSua_Click(object sender, EventArgs e)
         {
@@ -124,6 +144,9 @@ namespace QuanLyNhaThuoc.DanhMuc
             if (MessageBox.Show("Bạn có muốn xóa thuốc này không?", "Xác nhận",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
+                string maThuoc = txtMaThuoc.Text;
+                string sqlDeleteLo = $"DELETE FROM tLoThuoc WHERE MaThuoc = '{maThuoc}'";
+                dp.ExecuteNonQuery(sqlDeleteLo);
                 string sql = $"DELETE FROM tThuoc WHERE MaThuoc='{txtMaThuoc.Text}'";
                 dp.ExecuteNonQuery(sql);
                 MessageBox.Show("Đã xóa thuốc!");
@@ -131,49 +154,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                 ResetValue();
             }
         }
-        private void HienThiAnhThuoc(string tenFileAnh)
-        {
-            try
-            {
-                // Ảnh sẽ được lưu và hiển thị trong bin/Debug/Images
-                string duongDanAnh = Path.Combine(imagesFolder, tenFileAnh);
-
-                // Kiểm tra tồn tại
-                if (!File.Exists(duongDanAnh))
-                {
-                    if (picAnh.Image != null)
-                    {
-                        picAnh.Image.Dispose();
-                        picAnh.Image = null;
-                    }
-                    return;
-                }
-
-                // Giải phóng ảnh cũ
-                if (picAnh.Image != null)
-                {
-                    picAnh.Image.Dispose();
-                    picAnh.Image = null;
-                }
-
-                // Đọc ảnh bằng MemoryStream để tránh lỗi file bị khóa
-                byte[] imageBytes = File.ReadAllBytes(duongDanAnh);
-                using (var stream = new MemoryStream(imageBytes))
-                {
-                    picAnh.Image = Image.FromStream(stream);
-                }
-                picAnh.SizeMode = PictureBoxSizeMode.Zoom;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi hiển thị ảnh: " + ex.Message);
-                if (picAnh.Image != null)
-                {
-                    picAnh.Image.Dispose();
-                    picAnh.Image = null;
-                }
-            }
-        }
+        
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             // Lấy danh sách mã thuốc
@@ -255,7 +236,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                     txtCongDung.Text = r["CongDung"].ToString();
                     txtGiaNhap.Text = r["GiaNhap"].ToString();
                     txtGiaBan.Text = r["GiaBan"].ToString();
-
+                    
                     string tt = r["TrangThai"].ToString();
                     if (tt == "Còn hàng") rdoConHang.Checked = true;
                     else rdoHetHang.Checked = true;
@@ -281,11 +262,28 @@ namespace QuanLyNhaThuoc.DanhMuc
 
                     btnSua.Enabled = true;
                     btnXoa.Enabled = true;
-                    // ✅ Hiển thị ảnh thuốc
-                    if (dtThuoc.Rows[0]["Anh"] != DBNull.Value)
+
+                    // --- Hiển thị ảnh sản phẩm ---
+                    string tenAnh = dgvThuoc.CurrentRow.Cells["Anh"].Value.ToString();
+
+                    if (!string.IsNullOrEmpty(tenAnh))
                     {
-                        string tenFileAnh = dtThuoc.Rows[0]["Anh"].ToString();
-                        HienThiAnhThuoc(tenFileAnh);
+                        string duongDanAnh = Path.Combine(Application.StartupPath, "Images", tenAnh);
+                        if (File.Exists(duongDanAnh))
+                        {
+                            // Giải phóng ảnh cũ trước khi load ảnh mới (tránh bị lock)
+                            if (picAnh.Image != null)
+                            {
+                                picAnh.Image.Dispose();
+                            }
+
+                            picAnh.Image = Image.FromFile(duongDanAnh);
+                            picAnh.SizeMode = PictureBoxSizeMode.Zoom; // hiển thị vừa khung
+                        }
+                        else
+                        {
+                            picAnh.Image = null; // nếu không tìm thấy ảnh
+                        }
                     }
                     else
                     {
@@ -393,17 +391,32 @@ namespace QuanLyNhaThuoc.DanhMuc
                 string sqlAnh = $"SELECT Anh FROM tThuoc WHERE MaThuoc = '{txtMaThuoc.Text}'";
                 DataTable dtAnh = dp.GetDataTable(sqlAnh);
 
-                if (dtAnh.Rows.Count > 0 && dtAnh.Rows[0]["Anh"] != DBNull.Value)
+
+                // --- Hiển thị ảnh sản phẩm ---
+                string tenAnh = dgvThuoc.CurrentRow.Cells["Anh"].Value.ToString();
+
+                if (!string.IsNullOrEmpty(tenAnh))
                 {
-                    HienThiAnhThuoc(dtAnh.Rows[0]["Anh"].ToString());
+                    string duongDanAnh = Path.Combine(Application.StartupPath, "Images", tenAnh);
+                    if (File.Exists(duongDanAnh))
+                    {
+                        // Giải phóng ảnh cũ trước khi load ảnh mới (tránh bị lock)
+                        if (picAnh.Image != null)
+                        {
+                            picAnh.Image.Dispose();
+                        }
+
+                        picAnh.Image = Image.FromFile(duongDanAnh);
+                        picAnh.SizeMode = PictureBoxSizeMode.Zoom; // hiển thị vừa khung
+                    }
+                    else
+                    {
+                        picAnh.Image = null; // nếu không tìm thấy ảnh
+                    }
                 }
                 else
                 {
-                    if (picAnh.Image != null)
-                    {
-                        picAnh.Image.Dispose();
-                        picAnh.Image = null;
-                    }
+                    picAnh.Image = null;
                 }
 
                 string tt = dgvThuoc.CurrentRow.Cells["TrangThai"].Value.ToString();
@@ -436,70 +449,23 @@ namespace QuanLyNhaThuoc.DanhMuc
 
         private void btnAnh_Click(object sender, EventArgs e)
         {
-            try
+            OpenFileDialog dlgAnh = new OpenFileDialog();
+            dlgAnh.Filter = "Bitmap(*.bmp)|*.bmp|Gif(*.gif) |*.gif|All files(*.*)|*.*";
+            dlgAnh.InitialDirectory = Application.StartupPath;
+            dlgAnh.FilterIndex = 3;
+            dlgAnh.Title = "Chọn ảnh để hiển thị";
+            if (dlgAnh.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                // Đảm bảo thư mục chứa ảnh tồn tại
-                if (!Directory.Exists(imagesFolder))
-                    Directory.CreateDirectory(imagesFolder);
-
-                using (OpenFileDialog ofd = new OpenFileDialog())
-                {
-                    ofd.Title = "Chọn ảnh thuốc";
-                    ofd.Filter = "Ảnh (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
-
-                    if (ofd.ShowDialog() == DialogResult.OK)
-                    {
-                        string fileName = Path.GetFileName(ofd.FileName);
-                        string destPath = Path.Combine(imagesFolder, fileName); // ảnh lưu ở bin/Debug/Images
-
-                        // Giải phóng ảnh cũ nếu có (tránh lỗi "file bị khóa")
-                        if (picAnh.Image != null)
-                        {
-                            picAnh.Image.Dispose();
-                            picAnh.Image = null;
-                        }
-
-                        // Nếu file đã tồn tại, ghi đè lên
-                        File.Copy(ofd.FileName, destPath, true);
-
-                        // Đọc file ảnh một cách an toàn (tránh bị lock)
-                        byte[] imageBytes;
-                        using (FileStream fs = new FileStream(destPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-                        {
-                            using (var ms = new MemoryStream())
-                            {
-                                fs.CopyTo(ms);
-                                imageBytes = ms.ToArray();
-                            }
-                        }
-
-                        // Hiển thị ảnh trong PictureBox
-                        using (var stream = new MemoryStream(imageBytes))
-                        {
-                            picAnh.Image = Image.FromStream(stream);
-                        }
-                        picAnh.SizeMode = PictureBoxSizeMode.Zoom;
-
-                        // Lưu tên ảnh vào CSDL
-                        string sql = $"UPDATE tThuoc SET Anh = N'{fileName}' WHERE MaThuoc = '{txtMaThuoc.Text}'";
-                        dp.ExecuteNonQuery(sql);
-
-                        MessageBox.Show("Đã cập nhật ảnh cho thuốc!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi khi thêm ảnh: " + ex.Message);
+                picAnh.Image = Image.FromFile(dlgAnh.FileName);
+                string[] str = dlgAnh.FileName.Split('\\');
+                fileAnh = str[str.Length - 1].ToString();
             }
         }
 
 
         private void frmThuoc_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(imagesFolder);
-            if (!Directory.Exists(imagesFolder))
-                Directory.CreateDirectory(imagesFolder);
+            
             LoadData();
             LoadComboBox();
         }
@@ -518,7 +484,7 @@ namespace QuanLyNhaThuoc.DanhMuc
         void LoadData()
         {
             string sql = @"SELECT MaThuoc, TenThuoc, MaLoaiThuoc, MaDonVi, TrangThai, 
-                                  CongDung, GiaNhap, GiaBan
+                                  CongDung, GiaNhap, GiaBan, Anh
                            FROM tThuoc";
             DataTable dt = dp.GetDataTable(sql);
             dgvThuoc.DataSource = dt;
@@ -531,7 +497,7 @@ namespace QuanLyNhaThuoc.DanhMuc
             dgvThuoc.Columns["CongDung"].HeaderText = "Công dụng";
             dgvThuoc.Columns["GiaNhap"].HeaderText = "Giá nhập";
             dgvThuoc.Columns["GiaBan"].HeaderText = "Giá bán";
-
+            dgvThuoc.Columns["Anh"].HeaderText = "Ảnh";
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
             btnLuu.Enabled = false;

@@ -13,3 +13,4 @@ D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.cspro
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe.config
