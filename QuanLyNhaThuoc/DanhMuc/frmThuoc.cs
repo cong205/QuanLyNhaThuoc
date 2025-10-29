@@ -16,9 +16,14 @@ namespace QuanLyNhaThuoc.DanhMuc
     public partial class frmThuoc : Form
     {
         Classes.DataProcesser dp = new Classes.DataProcesser();
+        private readonly string imagesFolder = Path.Combine(Application.StartupPath, "Images");
+
+
         public frmThuoc()
         {
             InitializeComponent();
+            if (!Directory.Exists(imagesFolder))
+                Directory.CreateDirectory(imagesFolder);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -130,23 +135,43 @@ namespace QuanLyNhaThuoc.DanhMuc
         {
             try
             {
-                // Ghép đường dẫn đầy đủ đến thư mục chứa ảnh
-                string duongDanAnh = Path.Combine(Application.StartupPath, "Images", tenFileAnh);
+                // Ảnh sẽ được lưu và hiển thị trong bin/Debug/Images
+                string duongDanAnh = Path.Combine(imagesFolder, tenFileAnh);
 
-                // Kiểm tra ảnh có tồn tại không
-                if (File.Exists(duongDanAnh))
+                // Kiểm tra tồn tại
+                if (!File.Exists(duongDanAnh))
                 {
-                    picAnh.Image = Image.FromFile(duongDanAnh);
-                    picAnh.SizeMode = PictureBoxSizeMode.Zoom; // Hiển thị vừa khung
+                    if (picAnh.Image != null)
+                    {
+                        picAnh.Image.Dispose();
+                        picAnh.Image = null;
+                    }
+                    return;
                 }
-                else
+
+                // Giải phóng ảnh cũ
+                if (picAnh.Image != null)
                 {
-                    picAnh.Image = null; // Không có ảnh thì xoá ảnh cũ
+                    picAnh.Image.Dispose();
+                    picAnh.Image = null;
                 }
+
+                // Đọc ảnh bằng MemoryStream để tránh lỗi file bị khóa
+                byte[] imageBytes = File.ReadAllBytes(duongDanAnh);
+                using (var stream = new MemoryStream(imageBytes))
+                {
+                    picAnh.Image = Image.FromStream(stream);
+                }
+                picAnh.SizeMode = PictureBoxSizeMode.Zoom;
             }
-            catch
+            catch (Exception ex)
             {
-                picAnh.Image = null;
+                MessageBox.Show("Lỗi hiển thị ảnh: " + ex.Message);
+                if (picAnh.Image != null)
+                {
+                    picAnh.Image.Dispose();
+                    picAnh.Image = null;
+                }
             }
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
@@ -357,7 +382,6 @@ namespace QuanLyNhaThuoc.DanhMuc
         {
             if (e.RowIndex >= 0)
             {
-                // ======= LẤY THÔNG TIN THUỐC =======
                 txtMaThuoc.Text = dgvThuoc.CurrentRow.Cells["MaThuoc"].Value.ToString();
                 txtTenThuoc.Text = dgvThuoc.CurrentRow.Cells["TenThuoc"].Value.ToString();
                 cboLoaiThuoc.SelectedValue = dgvThuoc.CurrentRow.Cells["MaLoaiThuoc"].Value.ToString();
@@ -365,30 +389,27 @@ namespace QuanLyNhaThuoc.DanhMuc
                 txtCongDung.Text = dgvThuoc.CurrentRow.Cells["CongDung"].Value.ToString();
                 txtGiaNhap.Text = dgvThuoc.CurrentRow.Cells["GiaNhap"].Value.ToString();
                 txtGiaBan.Text = dgvThuoc.CurrentRow.Cells["GiaBan"].Value.ToString();
-                // ===== Hiển thị ảnh thuốc =====
+
                 string sqlAnh = $"SELECT Anh FROM tThuoc WHERE MaThuoc = '{txtMaThuoc.Text}'";
                 DataTable dtAnh = dp.GetDataTable(sqlAnh);
 
                 if (dtAnh.Rows.Count > 0 && dtAnh.Rows[0]["Anh"] != DBNull.Value)
                 {
-                    string fileName = dtAnh.Rows[0]["Anh"].ToString();
-                    string imgPath = Application.StartupPath + "\\Images\\" + fileName;
-
-                    if (System.IO.File.Exists(imgPath))
-                        picAnh.Image = Image.FromFile(imgPath);
-                    else
-                        picAnh.Image = null;
+                    HienThiAnhThuoc(dtAnh.Rows[0]["Anh"].ToString());
                 }
                 else
                 {
-                    picAnh.Image = null;
+                    if (picAnh.Image != null)
+                    {
+                        picAnh.Image.Dispose();
+                        picAnh.Image = null;
+                    }
                 }
 
                 string tt = dgvThuoc.CurrentRow.Cells["TrangThai"].Value.ToString();
                 if (tt == "Còn hàng") rdoConHang.Checked = true;
                 else rdoHetHang.Checked = true;
 
-                // ======= LẤY THÔNG TIN LÔ THUỐC =======
                 string maThuoc = txtMaThuoc.Text;
                 string sqlLo = $"SELECT TOP 1 * FROM tLoThuoc WHERE MaThuoc = '{maThuoc}' ORDER BY NgaySanXuat DESC";
                 DataTable dtLo = dp.GetDataTable(sqlLo);
@@ -396,16 +417,13 @@ namespace QuanLyNhaThuoc.DanhMuc
                 if (dtLo.Rows.Count > 0)
                 {
                     txtSoLuongTon.Text = dtLo.Rows[0]["SoLuongTon"].ToString();
-
                     if (dtLo.Rows[0]["NgaySanXuat"] != DBNull.Value)
                         dtpNgaySX.Value = Convert.ToDateTime(dtLo.Rows[0]["NgaySanXuat"]);
-
                     if (dtLo.Rows[0]["HanSuDung"] != DBNull.Value)
                         dtpHanSD.Value = Convert.ToDateTime(dtLo.Rows[0]["HanSuDung"]);
                 }
                 else
                 {
-                    // Nếu chưa có lô thuốc nào
                     txtSoLuongTon.Text = "0";
                     dtpNgaySX.Value = DateTime.Now;
                     dtpHanSD.Value = DateTime.Now;
@@ -418,48 +436,70 @@ namespace QuanLyNhaThuoc.DanhMuc
 
         private void btnAnh_Click(object sender, EventArgs e)
         {
-            using (OpenFileDialog ofd = new OpenFileDialog())
+            try
             {
-                ofd.Title = "Chọn ảnh thuốc";
-                ofd.Filter = "Ảnh (*.jpg; *.png; *.jpeg)|*.jpg;*.png;*.jpeg";
+                // Đảm bảo thư mục chứa ảnh tồn tại
+                if (!Directory.Exists(imagesFolder))
+                    Directory.CreateDirectory(imagesFolder);
 
-                if (ofd.ShowDialog() == DialogResult.OK)
+                using (OpenFileDialog ofd = new OpenFileDialog())
                 {
-                    try
+                    ofd.Title = "Chọn ảnh thuốc";
+                    ofd.Filter = "Ảnh (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png";
+
+                    if (ofd.ShowDialog() == DialogResult.OK)
                     {
-                        // Thư mục lưu ảnh trong project
-                        string imagesFolder = Application.StartupPath + "\\Images";
+                        string fileName = Path.GetFileName(ofd.FileName);
+                        string destPath = Path.Combine(imagesFolder, fileName); // ảnh lưu ở bin/Debug/Images
 
-                        // Tạo thư mục nếu chưa có
-                        if (!System.IO.Directory.Exists(imagesFolder))
-                            System.IO.Directory.CreateDirectory(imagesFolder);
+                        // Giải phóng ảnh cũ nếu có (tránh lỗi "file bị khóa")
+                        if (picAnh.Image != null)
+                        {
+                            picAnh.Image.Dispose();
+                            picAnh.Image = null;
+                        }
 
-                        // Lấy tên file
-                        string fileName = System.IO.Path.GetFileName(ofd.FileName);
-                        string destPath = System.IO.Path.Combine(imagesFolder, fileName);
+                        // Nếu file đã tồn tại, ghi đè lên
+                        File.Copy(ofd.FileName, destPath, true);
 
-                        // Sao chép ảnh vào thư mục Images (ghi đè nếu trùng)
-                        System.IO.File.Copy(ofd.FileName, destPath, true);
+                        // Đọc file ảnh một cách an toàn (tránh bị lock)
+                        byte[] imageBytes;
+                        using (FileStream fs = new FileStream(destPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                        {
+                            using (var ms = new MemoryStream())
+                            {
+                                fs.CopyTo(ms);
+                                imageBytes = ms.ToArray();
+                            }
+                        }
 
-                        // Hiển thị ảnh lên PictureBox
-                        picAnh.Image = Image.FromFile(destPath);
+                        // Hiển thị ảnh trong PictureBox
+                        using (var stream = new MemoryStream(imageBytes))
+                        {
+                            picAnh.Image = Image.FromStream(stream);
+                        }
+                        picAnh.SizeMode = PictureBoxSizeMode.Zoom;
 
-                        // Cập nhật vào database
+                        // Lưu tên ảnh vào CSDL
                         string sql = $"UPDATE tThuoc SET Anh = N'{fileName}' WHERE MaThuoc = '{txtMaThuoc.Text}'";
                         dp.ExecuteNonQuery(sql);
 
                         MessageBox.Show("Đã cập nhật ảnh cho thuốc!");
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi khi thêm ảnh: " + ex.Message);
-                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi thêm ảnh: " + ex.Message);
             }
         }
 
+
         private void frmThuoc_Load(object sender, EventArgs e)
         {
+            MessageBox.Show(imagesFolder);
+            if (!Directory.Exists(imagesFolder))
+                Directory.CreateDirectory(imagesFolder);
             LoadData();
             LoadComboBox();
         }
@@ -507,6 +547,11 @@ namespace QuanLyNhaThuoc.DanhMuc
             rdoConHang.Checked = true;
             cboLoaiThuoc.SelectedIndex = -1;
             cboDonVi.SelectedIndex = -1;
+            if (picAnh.Image != null)
+            {
+                picAnh.Image.Dispose();
+                picAnh.Image = null;
+            }
         }
 
         private void frmThuoc_Click(object sender, EventArgs e)
