@@ -48,3 +48,4 @@ D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.Gene
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources

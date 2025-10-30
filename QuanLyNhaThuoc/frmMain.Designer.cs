@@ -152,6 +152,7 @@
             this.menuTimKiem.Name = "menuTimKiem";
             this.menuTimKiem.Size = new System.Drawing.Size(84, 24);
             this.menuTimKiem.Text = "Tìm kiếm";
+            this.menuTimKiem.Click += new System.EventHandler(this.menuTimKiem_Click);
             // 
             // menuBaoCao
             // 
@@ -162,18 +163,21 @@
             this.menuBaoCao.Name = "menuBaoCao";
             this.menuBaoCao.Size = new System.Drawing.Size(77, 24);
             this.menuBaoCao.Text = "Báo cáo";
+            this.menuBaoCao.Click += new System.EventHandler(this.menuBaoCao_Click);
             // 
             // munuTroGiup
             // 
             this.munuTroGiup.Name = "munuTroGiup";
             this.munuTroGiup.Size = new System.Drawing.Size(78, 24);
             this.munuTroGiup.Text = "Trợ giúp";
+            this.munuTroGiup.Click += new System.EventHandler(this.munuTroGiup_Click);
             // 
             // menuThoat
             // 
             this.menuThoat.Name = "menuThoat";
             this.menuThoat.Size = new System.Drawing.Size(61, 24);
             this.menuThoat.Text = "Thoát";
+            this.menuThoat.Click += new System.EventHandler(this.menuThoat_Click);
             // 
             // label1
             // 
