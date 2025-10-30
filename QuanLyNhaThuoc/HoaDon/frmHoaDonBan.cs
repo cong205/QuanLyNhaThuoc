@@ -16,5 +16,10 @@ namespace QuanLyNhaThuoc.HoaDon
         {
             InitializeComponent();
         }
+
+        private void frmHoaDonBan_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
