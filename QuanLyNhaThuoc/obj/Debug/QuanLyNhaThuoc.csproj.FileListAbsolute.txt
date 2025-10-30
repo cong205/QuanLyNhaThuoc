@@ -31,3 +31,20 @@ D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.cs
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe.config
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.pdb
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.AssemblyReference.cache
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe.config
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmDonVi.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmKhachHang.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmLoaiThuoc.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmThuoc.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmMain.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmNhanVien.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.Properties.Resources.resources
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.GenerateResource.cache
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
+D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
