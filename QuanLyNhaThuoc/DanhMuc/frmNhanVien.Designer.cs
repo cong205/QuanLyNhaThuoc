@@ -104,7 +104,7 @@
             this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgaySinh.Location = new System.Drawing.Point(580, 79);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(113, 22);
             this.dtpNgaySinh.TabIndex = 16;
             // 
             // rdbNu
@@ -167,6 +167,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(179, 81);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(100, 22);
@@ -260,9 +261,9 @@
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThoat.Location = new System.Drawing.Point(688, 30);
+            this.btnThoat.Location = new System.Drawing.Point(688, 21);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 23);
+            this.btnThoat.Size = new System.Drawing.Size(75, 32);
             this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
@@ -271,9 +272,9 @@
             // btnBoqua
             // 
             this.btnBoqua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBoqua.Location = new System.Drawing.Point(566, 30);
+            this.btnBoqua.Location = new System.Drawing.Point(566, 21);
             this.btnBoqua.Name = "btnBoqua";
-            this.btnBoqua.Size = new System.Drawing.Size(75, 23);
+            this.btnBoqua.Size = new System.Drawing.Size(75, 32);
             this.btnBoqua.TabIndex = 4;
             this.btnBoqua.Text = "Bỏ qua";
             this.btnBoqua.UseVisualStyleBackColor = true;
@@ -282,9 +283,9 @@
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnXoa.Location = new System.Drawing.Point(446, 30);
+            this.btnXoa.Location = new System.Drawing.Point(446, 21);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.Size = new System.Drawing.Size(75, 32);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -293,9 +294,9 @@
             // btnSua
             // 
             this.btnSua.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSua.Location = new System.Drawing.Point(313, 30);
+            this.btnSua.Location = new System.Drawing.Point(313, 21);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.Size = new System.Drawing.Size(75, 32);
             this.btnSua.TabIndex = 2;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -304,9 +305,9 @@
             // btnLuu
             // 
             this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnLuu.Location = new System.Drawing.Point(179, 30);
+            this.btnLuu.Location = new System.Drawing.Point(179, 21);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
+            this.btnLuu.Size = new System.Drawing.Size(75, 32);
             this.btnLuu.TabIndex = 1;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = true;
@@ -315,9 +316,9 @@
             // btnThem
             // 
             this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnThem.Location = new System.Drawing.Point(50, 30);
+            this.btnThem.Location = new System.Drawing.Point(50, 21);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.Size = new System.Drawing.Size(75, 32);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;

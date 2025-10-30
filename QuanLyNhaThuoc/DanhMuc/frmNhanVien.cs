@@ -12,7 +12,7 @@ namespace QuanLyNhaThuoc
 {
     public partial class frmNhanVien : Form
     {
-        Classes.DataProcesser dtBase = new Classes.DataProcesser();
+        Classes.DataProcesser dp = new Classes.DataProcesser();
         public frmNhanVien()
         {
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace QuanLyNhaThuoc
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
-            DataTable dt = dtBase.GetDataTable("select * from tNhanVien");
+            DataTable dt = dp.GetDataTable("select * from tNhanVien");
             dgvNV.DataSource = dt;
 
             dgvNV.Columns[0].HeaderText = "Mã nhân viên";
@@ -41,47 +41,6 @@ namespace QuanLyNhaThuoc
         {
 
         }
-
-        //private void btnThem_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnLuu_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnSua_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnXoa_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnBoqua_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void btnThoat_Click(object sender, EventArgs e)
-        //{
-
-        //}
-
-        //private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)
-        //{
-
-        //}
-
-        //private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
-        //{
-
-        //}
-
         private void btnThoat_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show(
@@ -113,6 +72,25 @@ namespace QuanLyNhaThuoc
             btnLuu.Enabled = true;
             btnBoqua.Enabled = true;
             //ResetValue();
+            ResetValue();
+            string sql = "SELECT TOP 1 MaNV FROM tNhanVien ORDER BY MaNV DESC";
+            DataTable dt = dp.GetDataTable(sql);
+
+            string newMa;
+            if (dt.Rows.Count > 0)
+            {
+                string lastMa = dt.Rows[0]["MaNV"].ToString(); // Ví dụ "NV05"
+                int num = int.Parse(lastMa.Substring(2)); // lấy phần số
+                num++;
+                newMa = "NV" + num.ToString("D2"); // NV06
+            }
+            else
+            {
+                newMa = "NV01";
+            }
+
+            txtMaNV.Text = newMa;
+            txtMaNV.Enabled = false;
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
@@ -164,7 +142,7 @@ namespace QuanLyNhaThuoc
             // Neu dang them moi
             if (btnThem.Enabled == true)
             {
-                DataTable dt = dtBase.GetDataTable("select * from tNhanVien where MaNV='" + maNV + "'");
+                DataTable dt = dp.GetDataTable("select * from tNhanVien where MaNV='" + maNV + "'");
                 if (dt.Rows.Count > 0)
                 {
                     MessageBox.Show("ma nhan vien da ton tai");
@@ -174,7 +152,7 @@ namespace QuanLyNhaThuoc
 
                 string sqlInsert = "INSERT INTO tNhanVien VALUES ('" + maNV + "', N'" + tenNV + "', N'" + gioiTinh +
                     "', '" + ngaySinh + "', N'" + diaChi + "', '" + sdt + "', N'" + chucVu + "')";
-                dtBase.ExecuteNonQuery(sqlInsert);
+                dp.ExecuteNonQuery(sqlInsert);
             }
 
             // Neu dang sua
@@ -187,10 +165,10 @@ namespace QuanLyNhaThuoc
                     "', SoDienThoai = '" + sdt +
                     "', ChucVu = N'" + chucVu +
                     "' WHERE MaNV = '" + maNV + "'";
-                dtBase.ExecuteNonQuery(sqlUpdate);
+                dp.ExecuteNonQuery(sqlUpdate);
             }
 
-            DataTable dtnv = dtBase.GetDataTable("select * from tNhanVien");
+            DataTable dtnv = dp.GetDataTable("select * from tNhanVien");
             dgvNV.DataSource = dtnv;
 
             // Cam sua, xoa, luu, bo qua; chi duoc click them moi
@@ -219,8 +197,8 @@ namespace QuanLyNhaThuoc
                 "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 string maNV = txtMaNV.Text.Trim();
-                dtBase.ExecuteNonQuery("DELETE FROM tNhanVien WHERE MaNV = '" + maNV + "'");
-                dgvNV.DataSource = dtBase.GetDataTable("SELECT * FROM tNhanVien");
+                dp.ExecuteNonQuery("DELETE FROM tNhanVien WHERE MaNV = '" + maNV + "'");
+                dgvNV.DataSource = dp.GetDataTable("SELECT * FROM tNhanVien");
             }
 
             btnSua.Enabled = false;

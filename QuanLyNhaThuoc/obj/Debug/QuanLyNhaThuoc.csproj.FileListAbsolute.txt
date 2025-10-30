@@ -30,3 +30,4 @@ D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.cs
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
 D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
+D:\sourcevsc#\btlonnnn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
