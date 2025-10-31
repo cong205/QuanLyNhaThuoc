@@ -49,3 +49,5 @@ D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.Core
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources
+D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources
+D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources

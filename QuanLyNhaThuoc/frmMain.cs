@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using QuanLyNhaThuoc.DanhMuc;
 using QuanLyNhaThuoc.HoaDon;
 using QuanLyNhaThuoc.Classes;
+using QuanLyNhaThuoc.BaoCao;
 
 namespace QuanLyNhaThuoc
 {
@@ -90,37 +91,23 @@ namespace QuanLyNhaThuoc
 
         private void menuBaoCao_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DataProcesser dp = new DataProcesser();
-                DataTable dt = dp.GetDataTable("SELECT MaNCC, TenNCC, DiaChi, SoDienThoai FROM tNhaCungCap");
-                SaveFileDialog sfd = new SaveFileDialog { Filter = "CSV Files (*.csv)|*.csv", FileName = "BaoCaoNhaCungCap.csv" };
-                if (sfd.ShowDialog() == DialogResult.OK)
-                {
-                    using (var sw = new System.IO.StreamWriter(sfd.FileName, false, Encoding.UTF8))
-                    {
-                        for (int i = 0; i < dt.Columns.Count; i++) sw.Write((i > 0 ? "," : "") + dt.Columns[i].ColumnName);
-                        sw.WriteLine();
-                        foreach (DataRow row in dt.Rows)
-                        {
-                            for (int i = 0; i < dt.Columns.Count; i++) sw.Write((i > 0 ? "," : "") + row[i]?.ToString()?.Replace(",", " "));
-                            sw.WriteLine();
-                        }
-                    }
-                    MessageBox.Show("Xuất báo cáo thành công!\n" + sfd.FileName);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi xuất báo cáo: " + ex.Message);
-            }
+            
         }
 
         private void munuTroGiup_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-                "Tổng cục:\n- Tìm kiếm NCC theo Mã/Tên từ menu Tìm kiếm\n- Báo cáo: xuất CSV danh sách nhà cung cấp\n- Danh mục/Hóa đơn: mở các màn hình quản lý tương ứng\n- Thoát: đóng ứng dụng",
-                "Trợ giúp");
+        "📘 HƯỚNG DẪN SỬ DỤNG CHƯƠNG TRÌNH QUẢN LÝ NHÀ THUỐC\n\n" +
+        "1️⃣ **Danh mục:**\n   - Quản lý danh sách thuốc, nhà cung cấp, nhân viên, khách hàng.\n" +
+        "2️⃣ **Hóa đơn:**\n   - Lập hóa đơn bán, nhập hàng, và xem lịch sử giao dịch.\n" +
+        "3️⃣ **Tìm kiếm:**\n   - Tìm thuốc hoặc nhà cung cấp theo Mã hoặc Tên.\n" +
+        "4️⃣ **Báo cáo:**\n   - Xuất danh sách thuốc, hóa đơn, nhà cung cấp ra file Excel/CSV.\n" +
+        "5️⃣ **Cấu hình:**\n   - Cài đặt thông tin cửa hàng, người dùng, và sao lưu dữ liệu.\n" +
+        "6️⃣ **Thoát:**\n   - Đóng chương trình an toàn.\n\n" +
+        "💡 Mẹo: Hãy thường xuyên sao lưu dữ liệu để tránh mất mát thông tin.",
+        "Trợ giúp - Quản lý Nhà Thuốc",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information);
         }
 
         private void menuThoat_Click(object sender, EventArgs e)
@@ -165,6 +152,12 @@ namespace QuanLyNhaThuoc
             grid.DataSource = data;
             f.Controls.Add(grid);
             f.ShowDialog(this);
+        }
+
+        private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoDoanhThu bcdt = new frmBaoCaoDoanhThu();
+            bcdt.ShowDialog();
         }
     }
 }
