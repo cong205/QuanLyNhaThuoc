@@ -80,13 +80,7 @@ namespace QuanLyNhaThuoc
         // =================== Tổng cục: Tìm kiếm, Báo cáo, Trợ giúp, Thoát ===================
         private void menuTimKiem_Click(object sender, EventArgs e)
         {
-            string keyword = PromptKeyword("Nhập từ khóa (Mã/Tên NCC):");
-            if (string.IsNullOrWhiteSpace(keyword)) return;
-            DataProcesser dp = new DataProcesser();
-            string sql = "SELECT MaNCC, TenNCC, DiaChi, SoDienThoai FROM tNhaCungCap " +
-                         $"WHERE MaNCC LIKE N'%{keyword.Replace("'", "''")}%' OR TenNCC LIKE N'%{keyword.Replace("'", "''")}%'";
-            DataTable dt = dp.GetDataTable(sql);
-            ShowGridDialog(dt, "Kết quả tìm kiếm Nhà cung cấp");
+           
         }
 
         private void menuBaoCao_Click(object sender, EventArgs e)
@@ -118,46 +112,40 @@ namespace QuanLyNhaThuoc
             }
         }
 
-        // Helpers
-        private string PromptKeyword(string title)
-        {
-            Form f = new Form();
-            f.Text = title;
-            f.StartPosition = FormStartPosition.CenterParent;
-            f.FormBorderStyle = FormBorderStyle.FixedDialog;
-            f.MinimizeBox = false;
-            f.MaximizeBox = false;
-            f.ClientSize = new Size(380, 120);
-            Label lbl = new Label { Left = 12, Top = 15, Width = 80, Text = "Từ khóa:" };
-            TextBox tb = new TextBox { Left = 95, Top = 12, Width = 270 };
-            Button ok = new Button { Text = "Tìm", Left = 210, Width = 70, Top = 55, DialogResult = DialogResult.OK };
-            Button cancel = new Button { Text = "Hủy", Left = 295, Width = 70, Top = 55, DialogResult = DialogResult.Cancel };
-            f.Controls.Add(lbl); f.Controls.Add(tb); f.Controls.Add(ok); f.Controls.Add(cancel);
-            f.AcceptButton = ok; f.CancelButton = cancel;
-            return f.ShowDialog(this) == DialogResult.OK ? tb.Text : string.Empty;
-        }
-
-        private void ShowGridDialog(DataTable data, string title)
-        {
-            Form f = new Form();
-            f.Text = title;
-            f.StartPosition = FormStartPosition.CenterParent;
-            f.Size = new Size(700, 400);
-            DataGridView grid = new DataGridView();
-            grid.Dock = DockStyle.Fill;
-            grid.ReadOnly = true;
-            grid.AllowUserToAddRows = false;
-            grid.AllowUserToDeleteRows = false;
-            grid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            grid.DataSource = data;
-            f.Controls.Add(grid);
-            f.ShowDialog(this);
-        }
+        
+        
 
         private void báoCáoDoanhThuToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmBaoCaoDoanhThu bcdt = new frmBaoCaoDoanhThu();
             bcdt.ShowDialog();
+        }
+
+        private void báoCáoTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoTonKho bctk = new frmBaoCaoTonKho();
+            bctk.ShowDialog();
+        }
+
+        private void báoCáoNhậpHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBaoCaoNhapHang bcnh = new frmBaoCaoNhapHang();
+            bcnh.ShowDialog();
+        }
+
+        private void nhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

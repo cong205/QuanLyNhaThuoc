@@ -51,3 +51,4 @@ D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
+D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoTonKho.resources

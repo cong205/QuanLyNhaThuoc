@@ -56,6 +56,18 @@
     <Compile Include="BaoCao\frmBaoCaoDoanhThu.Designer.cs">
       <DependentUpon>frmBaoCaoDoanhThu.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\frmBaoCaoNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBaoCaoNhapHang.Designer.cs">
+      <DependentUpon>frmBaoCaoNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCao\frmBaoCaoTonKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCao\frmBaoCaoTonKho.Designer.cs">
+      <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DataProcesser.cs" />
     <Compile Include="DanhMuc\frmDonVi.cs">
       <SubType>Form</SubType>
@@ -115,6 +127,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaoCao\frmBaoCaoDoanhThu.resx">
       <DependentUpon>frmBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBaoCaoTonKho.resx">
+      <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frmDonVi.resx">
       <DependentUpon>frmDonVi.cs</DependentUpon>
