@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyNhaThuoc.DanhMuc;
 namespace QuanLyNhaThuoc
 {
     internal static class Program
@@ -16,7 +16,7 @@ namespace QuanLyNhaThuoc
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmDangNhap());
         }
     }
 }
