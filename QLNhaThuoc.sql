@@ -320,3 +320,9 @@ INSERT INTO tChiTietHDB (MaHDB, MaLo, SoLuongBan, GiamGia, ThanhTien) VALUES
 ('HDB20112025009', 'L009', 6, 0, 72000),
 ('HDB20112025010', 'L010', 7, 0.05, 43175);
 GO
+--them truong password
+ALTER TABLE tNhanVien
+ADD Password NVARCHAR(50) DEFAULT '123123';
+UPDATE tNhanVien
+SET Password = '123123'
+WHERE Password IS NULL;
