@@ -253,5 +253,22 @@ namespace QuanLyNhaThuoc
                 e.Handled = true;
             }
         }
+
+        private void txtTenNV_TextChanged(object sender, EventArgs e)
+        {
+            string keyword = txtTenNV.Text.Trim();
+            if (string.IsNullOrEmpty(keyword))
+            {
+                dgvNV.DataSource = dp.GetDataTable("SELECT * FROM tNhanVien");
+                return;
+            }
+
+            string sql = "SELECT * FROM tNhanVien WHERE TenNV LIKE @kw OR MaNV LIKE @kw";
+            var parameters = new Dictionary<string, object>
+            {
+                {"@kw", "%" + keyword + "%"}
+            };
+            dgvNV.DataSource = dp.GetDataTable(sql, parameters);
+        }
     }
 }

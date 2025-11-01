@@ -163,6 +163,7 @@
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(100, 22);
             this.txtTenNV.TabIndex = 8;
+            this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
             // txtMaNV
             // 
