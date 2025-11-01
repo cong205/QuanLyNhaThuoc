@@ -94,6 +94,12 @@
     <Compile Include="DanhMuc\frmLoThuoc.Designer.cs">
       <DependentUpon>frmLoThuoc.cs</DependentUpon>
     </Compile>
+   <Compile Include="DanhMuc\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="DanhMuc\frmNhaCungCap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frmLoaiThuoc.resx">
       <DependentUpon>frmLoaiThuoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frmLoThuoc.resx">
       <DependentUpon>frmLoThuoc.cs</DependentUpon>
