@@ -72,7 +72,8 @@ CREATE TABLE tNhanVien (
     NgaySinh DATE,
     DiaChi NVARCHAR(200),
     SoDienThoai NVARCHAR(20),
-    ChucVu NVARCHAR(50)
+    ChucVu NVARCHAR(50),
+    Password NVARCHAR(50) NOT NULL
 );
 GO
 
@@ -108,7 +109,6 @@ CREATE TABLE tChiTietHDN (
     MaHDN NVARCHAR(30),
     MaLo NVARCHAR(30),
     SoLuongNhap INT,
-    DonGiaNhap DECIMAL(18,2),
     ThanhTien DECIMAL(18,2),
     PRIMARY KEY (MaHDN, MaLo),
     FOREIGN KEY (MaHDN) REFERENCES tHoaDonNhap(MaHDN),
@@ -135,9 +135,8 @@ CREATE TABLE tChiTietHDB (
     MaHDB NVARCHAR(30),
     MaLo NVARCHAR(30),
     SoLuongBan INT,
-    DonGiaBan DECIMAL(18,2),
 	GiamGia FLOAT,
-    ThanhTien AS (SoLuongBan * DonGiaBan * (1 - ISNULL(GiamGia, 0))) PERSISTED,	
+    ThanhTien DECIMAL(18,2),
     PRIMARY KEY (MaHDB, MaLo),
     FOREIGN KEY (MaHDB) REFERENCES tHoaDonBan(MaHDB),
     FOREIGN KEY (MaLo) REFERENCES tLoThuoc(MaLo)
@@ -229,17 +228,18 @@ GO
 -- 6. NHÂN VIÊN
 -- =====================================
 INSERT INTO tNhanVien VALUES
-('NV01', N'Nguyễn Văn A', N'Nam', '1990-01-01', N'Hà Nội', '0911111111', N'Quản lý'),
-('NV02', N'Trần Thị B', N'Nữ', '1992-02-02', N'Hồ Chí Minh', '0911111112', N'Thu ngân'),
-('NV03', N'Lê Văn C', N'Nam', '1995-03-03', N'Đà Nẵng', '0911111113', N'Nhân viên bán hàng'),
-('NV04', N'Phạm Thị D', N'Nữ', '1998-04-04', N'Cần Thơ', '0911111114', N'Kế toán'),
-('NV05', N'Hoàng Văn E', N'Nam', '1993-05-05', N'Hà Nội', '0911111115', N'Nhân viên kho'),
-('NV06', N'Đỗ Thị F', N'Nữ', '1996-06-06', N'Hải Phòng', '0911111116', N'Nhân viên bán hàng'),
-('NV07', N'Nguyễn Văn G', N'Nam', '1991-07-07', N'Nghệ An', '0911111117', N'Thu ngân'),
-('NV08', N'Trần Thị H', N'Nữ', '1994-08-08', N'Huế', '0911111118', N'Nhân viên kho'),
-('NV09', N'Lý Văn I', N'Nam', '1997-09-09', N'Hà Nội', '0911111119', N'Bảo vệ'),
-('NV10', N'Phạm Thị K', N'Nữ', '1999-10-10', N'Đà Nẵng', '0911111120', N'Bán hàng');
+('NV01', N'Nguyễn Văn A', N'Nam', '1990-01-01', N'Hà Nội', '0911111111', N'Quản lý', 'NV01'),
+('NV02', N'Trần Thị B', N'Nữ', '1992-02-02', N'Hồ Chí Minh', '0911111112', N'Nhân viên', 'NV02'),
+('NV03', N'Lê Văn C', N'Nam', '1995-03-03', N'Đà Nẵng', '0911111113', N'Nhân viên', 'NV03'),
+('NV04', N'Phạm Thị D', N'Nữ', '1998-04-04', N'Cần Thơ', '0911111114', N'Nhân viên', 'NV04'),
+('NV05', N'Hoàng Văn E', N'Nam', '1993-05-05', N'Hà Nội', '0911111115', N'Nhân viên ', 'NV05'),
+('NV06', N'Đỗ Thị F', N'Nữ', '1996-06-06', N'Hải Phòng', '0911111116', N'Nhân viên ', 'NV06'),
+('NV07', N'Nguyễn Văn G', N'Nam', '1991-07-07', N'Nghệ An', '0911111117', N'Nhân viên', 'NV07'),
+('NV08', N'Trần Thị H', N'Nữ', '1994-08-08', N'Huế', '0911111118', N'Nhân viên', 'NV08'),
+('NV09', N'Lý Văn I', N'Nam', '1997-09-09', N'Hà Nội', '0911111119', N'Nhân viên', 'NV09'),
+('NV10', N'Phạm Thị K', N'Nữ', '1999-10-10', N'Đà Nẵng', '0911111120', N'Quản lý', 'NV10');
 GO
+
 
 -- =====================================
 -- 7. KHÁCH HÀNG
@@ -276,17 +276,17 @@ GO
 -- =====================================
 -- 9. CHI TIẾT HÓA ĐƠN NHẬP
 -- =====================================
-INSERT INTO tChiTietHDN VALUES
-('HDN20112025001', 'L001', 100, 2500, 250000),
-('HDN20112025002', 'L002', 100, 2000, 200000),
-('HDN20112025003', 'L003', 50, 10000, 500000),
-('HDN20112025004', 'L004', 80, 5000, 400000),
-('HDN20112025005', 'L005', 60, 3000, 180000),
-('HDN20112025006', 'L006', 70, 2500, 175000),
-('HDN20112025007', 'L007', 90, 15000, 1350000),
-('HDN20112025008', 'L008', 120, 3000, 360000),
-('HDN20112025009', 'L009', 100, 8000, 800000),
-('HDN20112025010', 'L010', 75, 4000, 300000);
+INSERT INTO tChiTietHDN (MaHDN, MaLo, SoLuongNhap, ThanhTien) VALUES
+('HDN20112025001', 'L001', 100, 250000),
+('HDN20112025002', 'L002', 100, 200000),
+('HDN20112025003', 'L003', 50, 500000),
+('HDN20112025004', 'L004', 80, 400000),
+('HDN20112025005', 'L005', 60, 180000),
+('HDN20112025006', 'L006', 70, 175000),
+('HDN20112025007', 'L007', 90, 1350000),
+('HDN20112025008', 'L008', 120, 360000),
+('HDN20112025009', 'L009', 100, 800000),
+('HDN20112025010', 'L010', 75, 300000);
 GO
 
 -- =====================================
@@ -308,14 +308,15 @@ GO
 -- =====================================
 -- 11. CHI TIẾT HÓA ĐƠN BÁN
 -- =====================================
-INSERT INTO tChiTietHDB (MaHDB, MaLo, SoLuongBan, DonGiaBan, GiamGia) VALUES
-('HDB20112025001', 'L001', 10, 4000, 0.05),
-('HDB20112025002', 'L002', 20, 3500, 0),
-('HDB20112025003', 'L003', 5, 15000, 0.1),
-('HDB20112025004', 'L004', 8, 8000, 0),
-('HDB20112025005', 'L005', 6, 5000, 0.05),
-('HDB20112025006', 'L006', 10, 4000, 0),
-('HDB20112025007', 'L007', 4, 20000, 0.1),
-('HDB20112025008', 'L008', 12, 5000, 0.05),
-('HDB20112025009', 'L009', 6, 12000, 0),
-('HDB20112025010', 'L010', 7, 6500, 0.05);
+INSERT INTO tChiTietHDB (MaHDB, MaLo, SoLuongBan, GiamGia, ThanhTien) VALUES
+('HDB20112025001', 'L001', 10, 0.05, 38000),
+('HDB20112025002', 'L002', 20, 0, 70000),
+('HDB20112025003', 'L003', 5, 0.1, 67500),
+('HDB20112025004', 'L004', 8, 0, 64000),
+('HDB20112025005', 'L005', 6, 0.05, 28500),
+('HDB20112025006', 'L006', 10, 0, 40000),
+('HDB20112025007', 'L007', 4, 0.1, 72000),
+('HDB20112025008', 'L008', 12, 0.05, 57000),
+('HDB20112025009', 'L009', 6, 0, 72000),
+('HDB20112025010', 'L010', 7, 0.05, 43175);
+GO
