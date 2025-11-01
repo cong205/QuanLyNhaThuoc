@@ -7,12 +7,52 @@
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:classes\\dataprocesser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:DanhMuc\\frmKhachHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:DanhMuc\\frmDonVi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|d:\\lap_trinh_truc_quan\\bai_tap_lon\\quanlynhathuoc\\danhmuc\\frmnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmnhacungcap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|d:\\lap_trinh_truc_quan\\bai_tap_lon\\quanlynhathuoc\\baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaotonkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaotonkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaotonkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,18 +61,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaotonkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaotonkho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaonhaphang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:baocao\\frmbaocaodoanhthu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +87,6 @@
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:hoadon\\frmhoadonban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmkhachhang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmdonvi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmdonvi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -73,22 +97,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\hoadon\\frmhoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:hoadon\\frmhoadonnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmthuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\danhmuc\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:danhmuc\\frmnhanvien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:DanhMuc\\frmDonVi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|solutionrelative:DanhMuc\\frmKhachHang.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4FB61367-B38B-44F8-A58A-4F1A03FC001E}|QuanLyNhaThuoc.csproj|D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.Designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -106,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -130,49 +138,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmBaoCaoDoanhThu.cs",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
-              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoDoanhThu.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
-              "RelativeToolTip": "BaoCao\\frmBaoCaoDoanhThu.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "frmNhaCungCap.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhaCungCap.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmNhaCungCap.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhaCungCap.cs",
+              "RelativeToolTip": "DanhMuc\\frmNhaCungCap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T13:29:11.587Z"
+              "WhenOpened": "2025-11-01T06:43:55.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "frmBaoCaoDoanhThu.cs [Design]",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
-              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoDoanhThu.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs [Design]",
-              "RelativeToolTip": "BaoCao\\frmBaoCaoDoanhThu.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T15:14:13.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMain.cs [Design]",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs [Design]",
-              "RelativeToolTip": "frmMain.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T13:48:30.035Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "frmMain.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",
               "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs",
               "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAIwJMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAuwIYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:21:42.753Z"
+              "WhenOpened": "2025-10-28T14:21:42.753Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -180,27 +168,104 @@
               "Title": "DataProcesser.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\Classes\\DataProcesser.cs",
               "RelativeDocumentMoniker": "Classes\\DataProcesser.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\Classes\\DataProcesser.cs*",
-              "RelativeToolTip": "Classes\\DataProcesser.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAIAAAAAAAAAA==",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\Classes\\DataProcesser.cs",
+              "RelativeToolTip": "Classes\\DataProcesser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-29T15:28:54.245Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmBaoCaoTonKho.cs [Design]",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoTonKho.cs",
-              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoTonKho.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoTonKho.cs [Design]",
-              "RelativeToolTip": "BaoCao\\frmBaoCaoTonKho.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "frmKhachHang.cs [Design]",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmKhachHang.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs [Design]",
+              "RelativeToolTip": "DanhMuc\\frmKhachHang.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:28:50.238Z"
+              "WhenOpened": "2025-10-30T03:04:40.832Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmNhanVien.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmNhanVien.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs",
+              "RelativeToolTip": "DanhMuc\\frmNhanVien.cs",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAwwAIBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T02:55:46.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmThuoc.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmThuoc.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs",
+              "RelativeToolTip": "DanhMuc\\frmThuoc.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAANMBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:22:49.106Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "frmDonVi.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmDonVi.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs",
+              "RelativeToolTip": "DanhMuc\\frmDonVi.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAvwDUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:21:29.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmKhachHang.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
+              "RelativeDocumentMoniker": "DanhMuc\\frmKhachHang.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
+              "RelativeToolTip": "DanhMuc\\frmKhachHang.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAQwM4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T14:22:23.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "frmBaoCaoNhapHang.cs [Design]",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoNhapHang.cs",
+              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoNhapHang.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoNhapHang.cs [Design]",
+              "RelativeToolTip": "BaoCao\\frmBaoCaoNhapHang.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T14:29:16.523Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmMain.cs [Design]",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.cs [Design]",
+              "RelativeToolTip": "frmMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T13:48:30.035Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "frmBaoCaoTonKho.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoTonKho.cs",
               "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoTonKho.cs",
@@ -208,22 +273,62 @@
               "RelativeToolTip": "BaoCao\\frmBaoCaoTonKho.cs",
               "ViewState": "AgIAAJEAAAAAAAAAAAAIwKoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:50:22.203Z"
+              "WhenOpened": "2025-10-31T14:50:22.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmBaoCaoNhapHang.cs [Design]",
+              "DocumentIndex": 11,
+              "Title": "frmBaoCaoTonKho.cs [Design]",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoTonKho.cs",
+              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoTonKho.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoTonKho.cs [Design]",
+              "RelativeToolTip": "BaoCao\\frmBaoCaoTonKho.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T14:28:50.238Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "frmBaoCaoDoanhThu.cs [Design]",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
+              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoDoanhThu.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs [Design]",
+              "RelativeToolTip": "BaoCao\\frmBaoCaoDoanhThu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:14:13.725Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmBaoCaoNhapHang.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoNhapHang.cs",
               "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoNhapHang.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoNhapHang.cs [Design]",
-              "RelativeToolTip": "BaoCao\\frmBaoCaoNhapHang.cs [Design]",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoNhapHang.cs",
+              "RelativeToolTip": "BaoCao\\frmBaoCaoNhapHang.cs",
+              "ViewState": "AgIAAI8AAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T14:29:16.523Z"
+              "WhenOpened": "2025-11-01T06:14:41.59Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
+              "Title": "frmBaoCaoDoanhThu.cs",
+              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
+              "RelativeDocumentMoniker": "BaoCao\\frmBaoCaoDoanhThu.cs",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\BaoCao\\frmBaoCaoDoanhThu.cs",
+              "RelativeToolTip": "BaoCao\\frmBaoCaoDoanhThu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T13:29:11.587Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "frmMain.Designer.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\frmMain.Designer.cs",
               "RelativeDocumentMoniker": "frmMain.Designer.cs",
@@ -231,11 +336,12 @@
               "RelativeToolTip": "frmMain.Designer.cs",
               "ViewState": "AgIAALEAAAAAAAAAAAAEwMgAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T12:53:33.093Z"
+              "WhenOpened": "2025-10-31T12:53:33.093Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "frmHoaDonBan.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\HoaDon\\frmHoaDonBan.cs",
               "RelativeDocumentMoniker": "HoaDon\\frmHoaDonBan.cs",
@@ -246,7 +352,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "frmHoaDonBan.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\HoaDon\\frmHoaDonBan.cs",
               "RelativeDocumentMoniker": "HoaDon\\frmHoaDonBan.cs",
@@ -258,62 +364,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "frmNhaCungCap.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhaCungCap.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmNhaCungCap.cs",
               "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhaCungCap.cs [Design]",
               "RelativeToolTip": "DanhMuc\\frmNhaCungCap.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T03:04:38.107Z"
+              "WhenOpened": "2025-10-30T03:04:38.107Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "frmNhanVien.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmNhanVien.cs",
               "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs [Design]",
               "RelativeToolTip": "DanhMuc\\frmNhanVien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T02:55:10.862Z"
+              "WhenOpened": "2025-10-30T02:55:10.862Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 21,
               "Title": "frmDonVi.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmDonVi.cs",
-              "ToolTip": "D:\\sourcevsc#\\btlonnnn\\QuanLyNhaThuoc\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\sourcevsc#\\btlonnnn\\QuanLyNhaThuoc\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs [Design]",
+              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs [Design]",
+              "RelativeToolTip": "DanhMuc\\frmDonVi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T03:11:14.3Z"
+              "WhenOpened": "2025-10-30T03:11:14.3Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "frmThuoc.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmThuoc.cs",
               "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs [Design]",
               "RelativeToolTip": "DanhMuc\\frmThuoc.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-29T06:02:30.059Z"
+              "WhenOpened": "2025-10-29T06:02:30.059Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "frmKhachHang.cs [Design]",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
-              "RelativeDocumentMoniker": "DanhMuc\\frmKhachHang.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs [Design]",
-              "RelativeToolTip": "DanhMuc\\frmKhachHang.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T03:04:40.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 22,
               "Title": "frmLoaiThuoc.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmLoaiThuoc.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmLoaiThuoc.cs",
@@ -324,7 +423,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 23,
               "Title": "frmHoaDonNhap.cs [Design]",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\HoaDon\\frmHoaDonNhap.cs",
               "RelativeDocumentMoniker": "HoaDon\\frmHoaDonNhap.cs",
@@ -335,55 +434,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "frmNhanVien.cs",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs",
-              "RelativeDocumentMoniker": "DanhMuc\\frmNhanVien.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmNhanVien.cs",
-              "RelativeToolTip": "DanhMuc\\frmNhanVien.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwBIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-30T02:55:46.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "frmThuoc.cs",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs",
-              "RelativeDocumentMoniker": "DanhMuc\\frmThuoc.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.cs",
-              "RelativeToolTip": "DanhMuc\\frmThuoc.cs",
-              "ViewState": "AgIAAL0BAAAAAAAAAAAUwNMBAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:22:49.106Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "frmDonVi.cs",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs",
-              "RelativeDocumentMoniker": "DanhMuc\\frmDonVi.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmDonVi.cs",
-              "RelativeToolTip": "DanhMuc\\frmDonVi.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAvwDUAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:21:29.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "frmKhachHang.cs",
-              "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
-              "RelativeDocumentMoniker": "DanhMuc\\frmKhachHang.cs",
-              "ToolTip": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmKhachHang.cs",
-              "RelativeToolTip": "DanhMuc\\frmKhachHang.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:22:23.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "frmThuoc.Designer.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmThuoc.Designer.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmThuoc.Designer.cs",
@@ -391,11 +442,12 @@
               "RelativeToolTip": "DanhMuc\\frmThuoc.Designer.cs",
               "ViewState": "AgIAAEkAAAAAAAAAAAAuwFoAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T15:17:37.113Z"
+              "WhenOpened": "2025-10-28T15:17:37.113Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "frmLoaiThuoc.cs",
               "DocumentMoniker": "D:\\Lap_Trinh_Truc_Quan\\Bai_Tap_Lon\\QuanLyNhaThuoc\\DanhMuc\\frmLoaiThuoc.cs",
               "RelativeDocumentMoniker": "DanhMuc\\frmLoaiThuoc.cs",

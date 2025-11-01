@@ -189,19 +189,6 @@ namespace QuanLyNhaThuoc.DanhMuc
 
         private void txtTenKhach_TextChanged(object sender, EventArgs e)
         {
-            string keyword = txtTenKhach.Text.Trim();
-            if (string.IsNullOrEmpty(keyword))
-            {
-                LoadData();
-                return;
-            }
-
-            string sql = "SELECT * FROM tKhachHang WHERE TenKH LIKE @kw OR MaKH LIKE @kw";
-            var parameters = new Dictionary<string, object>
-            {
-                {"@kw", "%" + keyword + "%"}
-            };
-            dgvKhachHang.DataSource = dp.GetDataTable(sql, parameters);
         }
 
         private void rdoNam_CheckedChanged(object sender, EventArgs e)
