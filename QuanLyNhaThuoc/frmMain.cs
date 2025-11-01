@@ -16,6 +16,11 @@ namespace QuanLyNhaThuoc
 {
     public partial class frmMain : Form
     {
+        private string chucVu = "";
+        public void setChucVu(string cv)
+        {
+            chucVu = cv;
+        }
         public frmMain()
         {
             InitializeComponent();
@@ -34,6 +39,11 @@ namespace QuanLyNhaThuoc
 
         private void mnuNhanVien_Click(object sender, EventArgs e)
         {
+            if(chucVu!="Quản lý")
+            {
+                MessageBox.Show("Chức năng này chỉ dành cho Quản lý!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             frmNhanVien nv = new frmNhanVien();
             nv.ShowDialog();
         }
