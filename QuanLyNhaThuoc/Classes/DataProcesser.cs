@@ -14,6 +14,7 @@ namespace QuanLyNhaThuoc.Classes
         //string strConnect = @"Data Source=DESKTOP-SBAL8UV\SQLEXPRESS;Initial Catalog=QLNhaThuoc;Integrated Security=True";
         //string strConnect = @"Data Source=THEANH;Initial Catalog=QLNhaThuoc;Integrated Security=True";
         //string strConnect = @"Data Source=DESKTOP-SBAL8UV\SQLEXPRESS;Initial Catalog=QLNhaThuoc;Integrated Security=True";
+        //string strConnect = @"Data Source=ADMIN-PC\SQLEXPRESS;Initial Catalog=QLNhaThuoc;Integrated Security=True";
         string strConnect = @"Data Source=.;Initial Catalog=QLNhaThuoc;Integrated Security=True";
         SqlConnection sqlConnect = null;
 
