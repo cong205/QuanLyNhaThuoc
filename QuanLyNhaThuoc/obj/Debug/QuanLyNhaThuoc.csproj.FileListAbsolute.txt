@@ -53,3 +53,24 @@ D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCa
 D:\Lap_Trinh_Truc_Quan\Bai_Tap_Lon\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
 D:\Lap_Trinh_Truc_Quan\BAI_TAP_LON\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoTonKho.resources
 D:\New folder\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoTonKho.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.AssemblyReference.cache
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe.config
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoDoanhThu.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.BaoCao.frmBaoCaoTonKho.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmDonVi.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmKhachHang.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmLoaiThuoc.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmThuoc.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmMain.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.frmNhanVien.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonBan.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.HoaDon.frmHoaDonNhap.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.Properties.Resources.resources
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.GenerateResource.cache
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.csproj.CoreCompileInputs.cache
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.exe
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.pdb
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe.config
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.exe
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\bin\Debug\QuanLyNhaThuoc.pdb
+D:\sourcevsc#\btlondchdn\QuanLyNhaThuoc\QuanLyNhaThuoc\obj\Debug\QuanLyNhaThuoc.DanhMuc.frmLoThuoc.resources

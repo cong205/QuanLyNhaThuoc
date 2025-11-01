@@ -69,6 +69,7 @@
       <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\DataProcesser.cs" />
+    <Compile Include="Classes\Function.cs" />
     <Compile Include="DanhMuc\frmDonVi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +87,12 @@
     </Compile>
     <Compile Include="DanhMuc\frmLoaiThuoc.Designer.cs">
       <DependentUpon>frmLoaiThuoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhMuc\frmLoThuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DanhMuc\frmLoThuoc.Designer.cs">
+      <DependentUpon>frmLoThuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="DanhMuc\frmNhaCungCap.cs">
       <SubType>Form</SubType>
@@ -140,6 +147,9 @@
     <EmbeddedResource Include="DanhMuc\frmLoaiThuoc.resx">
       <DependentUpon>frmLoaiThuoc.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DanhMuc\frmLoThuoc.resx">
+      <DependentUpon>frmLoThuoc.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DanhMuc\frmThuoc.resx">
       <DependentUpon>frmThuoc.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon\frmHoaDonBan.resx">
       <DependentUpon>frmHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoaDon\frmHoaDonNhap.resx">
+      <DependentUpon>frmHoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

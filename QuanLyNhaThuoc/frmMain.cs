@@ -147,5 +147,11 @@ namespace QuanLyNhaThuoc
         {
 
         }
+
+        private void lôThuốcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLoThuoc frmLoThuoc = new frmLoThuoc();
+            frmLoThuoc.ShowDialog();
+        }
     }
 }
