@@ -375,9 +375,16 @@ namespace QuanLyNhaThuoc.HoaDon
                 // 2. Trừ lại số lượng trong kho
                 string sqlUpdateKho = $"UPDATE tLoThuoc SET SoLuongTon = SoLuongTon - {soLuong} WHERE MaLo='{maLo}'";
                 dp.ExecuteNonQuery(sqlUpdateKho);
-
-                // 3. Load lại DataGridView
+                //3/ Cập nhật lại tổng tiền hóa đơn nhập
+                string sqlUpdateTong = $"UPDATE tHoaDonNhap " +
+                                       $"SET TongTien = (SELECT SUM(ThanhTien) FROM tChiTietHDN WHERE MaHDN = '{maHDN}') " +
+                                       $"WHERE MaHDN = '{maHDN}'";
+                dp.ExecuteNonQuery(sqlUpdateTong);
+                txtTongTien.Text= dp.GetDataTable($"SELECT TongTien FROM tHoaDonNhap WHERE MaHDN = '{maHDN}'").Rows[0][0].ToString();
+                // 4. Load lại DataGridView
                 loadCTHD(maHDN);
+                MessageBox.Show("Da xoa san pham khoi hoa don!");
+                
             }
         }
         private void txtHuy_Click(object sender, EventArgs e)
