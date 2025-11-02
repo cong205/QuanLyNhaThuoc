@@ -33,7 +33,6 @@
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.rdbNu = new System.Windows.Forms.RadioButton();
             this.rdbNam = new System.Windows.Forms.RadioButton();
-            this.txtChucVu = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
@@ -54,6 +53,9 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.dgvNV = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtPW = new System.Windows.Forms.TextBox();
+            this.cboChucVu = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
@@ -62,11 +64,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cboChucVu);
+            this.groupBox1.Controls.Add(this.txtPW);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.dtpNgaySinh);
             this.groupBox1.Controls.Add(this.rdbNu);
             this.groupBox1.Controls.Add(this.rdbNam);
-            this.groupBox1.Controls.Add(this.txtChucVu);
             this.groupBox1.Controls.Add(this.txtSDT);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtTenNV);
@@ -111,7 +115,7 @@
             // 
             this.rdbNu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdbNu.AutoSize = true;
-            this.rdbNu.Location = new System.Drawing.Point(269, 155);
+            this.rdbNu.Location = new System.Drawing.Point(253, 151);
             this.rdbNu.Name = "rdbNu";
             this.rdbNu.Size = new System.Drawing.Size(45, 20);
             this.rdbNu.TabIndex = 15;
@@ -123,7 +127,7 @@
             // 
             this.rdbNam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rdbNam.AutoSize = true;
-            this.rdbNam.Location = new System.Drawing.Point(151, 155);
+            this.rdbNam.Location = new System.Drawing.Point(179, 152);
             this.rdbNam.Name = "rdbNam";
             this.rdbNam.Size = new System.Drawing.Size(57, 20);
             this.rdbNam.TabIndex = 14;
@@ -131,20 +135,12 @@
             this.rdbNam.Text = "Nam";
             this.rdbNam.UseVisualStyleBackColor = true;
             // 
-            // txtChucVu
-            // 
-            this.txtChucVu.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtChucVu.Location = new System.Drawing.Point(367, 180);
-            this.txtChucVu.Name = "txtChucVu";
-            this.txtChucVu.Size = new System.Drawing.Size(100, 22);
-            this.txtChucVu.TabIndex = 13;
-            // 
             // txtSDT
             // 
             this.txtSDT.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSDT.Location = new System.Drawing.Point(580, 152);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(100, 22);
+            this.txtSDT.Size = new System.Drawing.Size(113, 22);
             this.txtSDT.TabIndex = 12;
             this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             // 
@@ -153,7 +149,7 @@
             this.txtDiaChi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDiaChi.Location = new System.Drawing.Point(580, 118);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(100, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(113, 22);
             this.txtDiaChi.TabIndex = 11;
             // 
             // txtTenNV
@@ -161,7 +157,7 @@
             this.txtTenNV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenNV.Location = new System.Drawing.Point(179, 112);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(100, 22);
+            this.txtTenNV.Size = new System.Drawing.Size(119, 22);
             this.txtTenNV.TabIndex = 8;
             this.txtTenNV.TextChanged += new System.EventHandler(this.txtTenNV_TextChanged);
             // 
@@ -171,14 +167,14 @@
             this.txtMaNV.Enabled = false;
             this.txtMaNV.Location = new System.Drawing.Point(179, 81);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(100, 22);
+            this.txtMaNV.Size = new System.Drawing.Size(119, 22);
             this.txtMaNV.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(240, 183);
+            this.label7.Location = new System.Drawing.Point(47, 186);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 16);
             this.label7.TabIndex = 6;
@@ -333,7 +329,7 @@
             this.dgvNV.Name = "dgvNV";
             this.dgvNV.RowHeadersWidth = 51;
             this.dgvNV.RowTemplate.Height = 24;
-            this.dgvNV.Size = new System.Drawing.Size(726, 127);
+            this.dgvNV.Size = new System.Drawing.Size(726, 137);
             this.dgvNV.TabIndex = 0;
             this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
             // 
@@ -347,6 +343,32 @@
             this.groupBox2.Size = new System.Drawing.Size(800, 236);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(454, 186);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(61, 16);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Mật khẩu";
+            // 
+            // txtPW
+            // 
+            this.txtPW.Location = new System.Drawing.Point(580, 186);
+            this.txtPW.Name = "txtPW";
+            this.txtPW.Size = new System.Drawing.Size(113, 22);
+            this.txtPW.TabIndex = 19;
+            // 
+            // cboChucVu
+            // 
+            this.cboChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboChucVu.FormattingEnabled = true;
+            this.cboChucVu.Location = new System.Drawing.Point(179, 181);
+            this.cboChucVu.Name = "cboChucVu";
+            this.cboChucVu.Size = new System.Drawing.Size(119, 24);
+            this.cboChucVu.TabIndex = 20;
             // 
             // frmNhanVien
             // 
@@ -373,7 +395,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtTenNV;
@@ -397,5 +418,8 @@
         private System.Windows.Forms.DateTimePicker dtpNgaySinh;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtPW;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cboChucVu;
     }
 }

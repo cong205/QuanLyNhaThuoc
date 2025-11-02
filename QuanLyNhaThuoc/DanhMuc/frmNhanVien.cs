@@ -17,9 +17,15 @@ namespace QuanLyNhaThuoc
         {
             InitializeComponent();
         }
+        private void fillChucVu()
+        {
+            cboChucVu.Items.Add("Quản lý");
+            cboChucVu.Items.Add("Nhân viên");
+        }
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            fillChucVu();
             DataTable dt = dp.GetDataTable("select * from tNhanVien");
             dgvNV.DataSource = dt;
 
@@ -30,6 +36,7 @@ namespace QuanLyNhaThuoc
             dgvNV.Columns[4].HeaderText = "Địa chỉ";
             dgvNV.Columns[5].HeaderText = "Số điện thoại";
             dgvNV.Columns[6].HeaderText = "Chức vụ";
+            dgvNV.Columns[7].HeaderText = "Mật khẩu";
 
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
@@ -58,7 +65,7 @@ namespace QuanLyNhaThuoc
             txtTenNV.Text = "";
             txtDiaChi.Text = "";
             txtSDT.Text = "";
-            txtChucVu.Text = "";
+            cboChucVu.SelectedIndex = -1;
             rdbNam.Checked = false;
             rdbNu.Checked = false;
             dtpNgaySinh.Value = DateTime.Now;
@@ -95,35 +102,50 @@ namespace QuanLyNhaThuoc
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (txtMaNV.Text.Trim() == "")
+            string maNV = txtMaNV.Text.Trim();
+            string tenNV = txtTenNV.Text.Trim();
+            string diaChi = txtDiaChi.Text.Trim();
+            string sdt = txtSDT.Text.Trim();
+            string chucVu = cboChucVu.Text.Trim();
+            string matKhau = txtPW.Text.Trim();
+
+            bool rdbNamChecked = rdbNam.Checked;
+            bool rdbNuChecked = rdbNu.Checked;
+
+            if (string.IsNullOrWhiteSpace(maNV))
             {
-                MessageBox.Show("ban phai nhap ma nhan vien");
-                txtMaNV.Focus();
+                MessageBox.Show("Bạn phải nhập mã nhân viên");
+                txtMaNV.Focus(); // Vẫn phải Focus vào control gốc
                 return;
             }
-            if (txtTenNV.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(tenNV))
             {
-                MessageBox.Show("ban phai nhap ten nhan vien");
+                MessageBox.Show("Bạn phải nhập tên nhân viên");
                 txtTenNV.Focus();
                 return;
             }
-            if (txtSDT.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(sdt))
             {
-                MessageBox.Show("ban phai nhap so dien thoai");
+                MessageBox.Show("Bạn phải nhập số điện thoại");
                 txtSDT.Focus();
                 return;
             }
-            if (txtDiaChi.Text.Trim() == "")
+
+            if (string.IsNullOrWhiteSpace(diaChi))
             {
-                MessageBox.Show("ban phai nhap dia chi");
+                MessageBox.Show("Bạn phải nhập địa chỉ");
                 txtDiaChi.Focus();
                 return;
             }
-            if (rdbNam.Checked == false && rdbNu.Checked == false)
+
+            if (rdbNamChecked == false && rdbNuChecked == false)
             {
-                MessageBox.Show("ban phai chon gioi tinh");
+                MessageBox.Show("Bạn phải chọn giới tính");
                 return;
             }
+
             if (dtpNgaySinh.Value.Date > DateTime.Now.Date)
             {
                 MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -131,13 +153,23 @@ namespace QuanLyNhaThuoc
                 return;
             }
 
-            string maNV = txtMaNV.Text.Trim();
-            string tenNV = txtTenNV.Text.Trim();
-            string gioiTinh = rdbNam.Checked == true ? "Nam" : "Nữ";
+            if (string.IsNullOrWhiteSpace(chucVu))
+            {
+                MessageBox.Show("Bạn phải chọn chức vụ");
+                cboChucVu.Focus();
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(matKhau))
+            {
+                MessageBox.Show("Bạn phải nhập mật khẩu");
+                txtPW.Focus();
+                return;
+            }
+            string gioiTinh = rdbNamChecked ? "Nam" : "Nữ";
             string ngaySinh = dtpNgaySinh.Value.ToString("yyyy-MM-dd");
-            string diaChi = txtDiaChi.Text.Trim();
-            string sdt = txtSDT.Text.Trim();
-            string chucVu = txtChucVu.Text.Trim();
+
+
 
             // Neu dang them moi
             if (btnThem.Enabled == true)
@@ -151,7 +183,7 @@ namespace QuanLyNhaThuoc
                 }
 
                 string sqlInsert = "INSERT INTO tNhanVien VALUES ('" + maNV + "', N'" + tenNV + "', N'" + gioiTinh +
-                    "', '" + ngaySinh + "', N'" + diaChi + "', '" + sdt + "', N'" + chucVu + "')";
+                    "', '" + ngaySinh + "', N'" + diaChi + "', '" + sdt + "', N'" + chucVu + "','"+matKhau+ "')";
                 dp.ExecuteNonQuery(sqlInsert);
             }
 
@@ -164,6 +196,7 @@ namespace QuanLyNhaThuoc
                     "', DiaChi = N'" + diaChi +
                     "', SoDienThoai = '" + sdt +
                     "', ChucVu = N'" + chucVu +
+                    "', Password = '" + matKhau +
                     "' WHERE MaNV = '" + maNV + "'";
                 dp.ExecuteNonQuery(sqlUpdate);
             }
@@ -238,7 +271,8 @@ namespace QuanLyNhaThuoc
             dtpNgaySinh.Value = Convert.ToDateTime(dgvNV.CurrentRow.Cells["NgaySinh"].Value);
             txtDiaChi.Text = dgvNV.CurrentRow.Cells["DiaChi"].Value.ToString();
             txtSDT.Text = dgvNV.CurrentRow.Cells["SoDienThoai"].Value.ToString();
-            txtChucVu.Text = dgvNV.CurrentRow.Cells["ChucVu"].Value.ToString();
+            cboChucVu.Text = dgvNV.CurrentRow.Cells["ChucVu"].Value.ToString();
+            txtPW.Text = dgvNV.CurrentRow.Cells["Password"].Value.ToString();
         }
 
         private void txtSDT_KeyPress(object sender, KeyPressEventArgs e)

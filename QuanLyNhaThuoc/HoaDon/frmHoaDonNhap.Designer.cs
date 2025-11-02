@@ -68,7 +68,7 @@
             this.txtMaHDN = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCTHDN)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -103,6 +103,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Enabled = false;
             this.txtTongTien.Location = new System.Drawing.Point(641, 238);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Size = new System.Drawing.Size(100, 22);
@@ -208,6 +209,7 @@
             // 
             // cboMaLo
             // 
+            this.cboMaLo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaLo.FormattingEnabled = true;
             this.cboMaLo.Location = new System.Drawing.Point(173, 13);
             this.cboMaLo.Name = "cboMaLo";
@@ -217,6 +219,7 @@
             // 
             // txtThanhTien
             // 
+            this.txtThanhTien.Enabled = false;
             this.txtThanhTien.Location = new System.Drawing.Point(394, 54);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.Size = new System.Drawing.Size(100, 22);
@@ -385,31 +388,33 @@
             this.dtpNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap.Location = new System.Drawing.Point(171, 61);
             this.dtpNgayNhap.Name = "dtpNgayNhap";
-            this.dtpNgayNhap.Size = new System.Drawing.Size(145, 22);
+            this.dtpNgayNhap.Size = new System.Drawing.Size(169, 22);
             this.dtpNgayNhap.TabIndex = 15;
             // 
             // cboMaNCC
             // 
+            this.cboMaNCC.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMaNCC.FormattingEnabled = true;
             this.cboMaNCC.Location = new System.Drawing.Point(518, 29);
             this.cboMaNCC.Name = "cboMaNCC";
-            this.cboMaNCC.Size = new System.Drawing.Size(164, 24);
+            this.cboMaNCC.Size = new System.Drawing.Size(175, 24);
             this.cboMaNCC.TabIndex = 14;
             this.cboMaNCC.SelectedIndexChanged += new System.EventHandler(this.cboMaNCC_SelectedIndexChanged);
             // 
             // cboMaNV
             // 
+            this.cboMaNV.Enabled = false;
             this.cboMaNV.FormattingEnabled = true;
             this.cboMaNV.Location = new System.Drawing.Point(171, 92);
             this.cboMaNV.Name = "cboMaNV";
-            this.cboMaNV.Size = new System.Drawing.Size(145, 24);
+            this.cboMaNV.Size = new System.Drawing.Size(169, 24);
             this.cboMaNV.TabIndex = 13;
             // 
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(518, 125);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(164, 22);
+            this.txtSDT.Size = new System.Drawing.Size(175, 22);
             this.txtSDT.TabIndex = 12;
             this.txtSDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSDT_KeyPress);
             this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
@@ -418,14 +423,14 @@
             // 
             this.txtDiaChi.Location = new System.Drawing.Point(518, 94);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(164, 22);
+            this.txtDiaChi.Size = new System.Drawing.Size(175, 22);
             this.txtDiaChi.TabIndex = 11;
             // 
             // txtTenNCC
             // 
             this.txtTenNCC.Location = new System.Drawing.Point(518, 63);
             this.txtTenNCC.Name = "txtTenNCC";
-            this.txtTenNCC.Size = new System.Drawing.Size(164, 22);
+            this.txtTenNCC.Size = new System.Drawing.Size(175, 22);
             this.txtTenNCC.TabIndex = 10;
             // 
             // txtTenNV
@@ -433,7 +438,7 @@
             this.txtTenNV.Enabled = false;
             this.txtTenNV.Location = new System.Drawing.Point(171, 125);
             this.txtTenNV.Name = "txtTenNV";
-            this.txtTenNV.Size = new System.Drawing.Size(145, 22);
+            this.txtTenNV.Size = new System.Drawing.Size(169, 22);
             this.txtTenNV.TabIndex = 9;
             // 
             // txtMaHDN
@@ -441,7 +446,7 @@
             this.txtMaHDN.Enabled = false;
             this.txtMaHDN.Location = new System.Drawing.Point(171, 29);
             this.txtMaHDN.Name = "txtMaHDN";
-            this.txtMaHDN.Size = new System.Drawing.Size(145, 22);
+            this.txtMaHDN.Size = new System.Drawing.Size(169, 22);
             this.txtMaHDN.TabIndex = 8;
             // 
             // label9
@@ -462,29 +467,29 @@
             this.label8.TabIndex = 6;
             this.label8.Text = "Địa chỉ";
             // 
-            // label1
+            // label18
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(346, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(175, 31);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Hóa Đơn Nhập";
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Monotype Corsiva", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Red;
+            this.label18.Location = new System.Drawing.Point(317, 2);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(242, 37);
+            this.label18.TabIndex = 32;
+            this.label18.Text = "HÓA ĐƠN NHẬP";
             // 
             // frmHoaDonNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(871, 560);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.cboMaHoaDon);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Name = "frmHoaDonNhap";
             this.Text = "frmHoaDonNhap";
             this.Load += new System.EventHandler(this.frmHoaDonNhap_Load);
@@ -539,7 +544,7 @@
         private System.Windows.Forms.TextBox txtMaHDN;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label18;
     }
 }

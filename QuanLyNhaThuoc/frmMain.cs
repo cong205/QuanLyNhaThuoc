@@ -17,9 +17,11 @@ namespace QuanLyNhaThuoc
     public partial class frmMain : Form
     {
         private string chucVu = "";
-        public void setChucVu(string cv)
+        private string maNhanVien = "";
+        public void setChucVu(string cv,string maNV)
         {
             chucVu = cv;
+            maNhanVien = maNV;
         }
         public frmMain()
         {
@@ -83,6 +85,7 @@ namespace QuanLyNhaThuoc
         private void mnuHoaDonNhap_Click(object sender, EventArgs e)
         {
             frmHoaDonNhap hdn = new frmHoaDonNhap();
+            hdn.setMaNV(maNhanVien);
             hdn.ShowDialog();
 
         }

@@ -14,6 +14,7 @@ namespace QuanLyNhaThuoc.DanhMuc
     {
         Classes.DataProcesser dp = new Classes.DataProcesser();
         string chucVu = "";
+        string maNV = "";
         public frmDangNhap()
         {
             InitializeComponent();
@@ -38,8 +39,9 @@ namespace QuanLyNhaThuoc.DanhMuc
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 chucVu = dt.Rows[0]["ChucVu"].ToString();
+                maNV = dt.Rows[0]["MaNV"].ToString();
                 frmMain f = new frmMain();
-                f.setChucVu(chucVu);
+                f.setChucVu(chucVu,maNV);
                 f.Show();
                 this.Hide();
             }

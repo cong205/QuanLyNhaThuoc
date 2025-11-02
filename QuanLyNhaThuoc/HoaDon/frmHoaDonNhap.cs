@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Excel = Microsoft.Office.Interop.Excel;
@@ -16,9 +17,21 @@ namespace QuanLyNhaThuoc.HoaDon
         Classes.DataProcesser dp = new Classes.DataProcesser();
         Classes.Function ft = new Classes.Function();
         bool isLoading = false;
+        private string maNhanVien = "";
+        private string tenNhanVien = "";
         public frmHoaDonNhap()
         {
             InitializeComponent();
+        }
+        public void setMaNV(string maNV)
+        {
+            maNhanVien = maNV;
+            string sql = "SELECT * FROM tNhanVien WHERE MaNV = '" + maNV + "'";
+            DataTable dt = dp.GetDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                tenNhanVien = dt.Rows[0]["TenNV"].ToString();
+            }
         }
 
         private void frmHoaDonNhap_Load(object sender, EventArgs e)
@@ -27,15 +40,17 @@ namespace QuanLyNhaThuoc.HoaDon
             LoadMaHoaDon();
             LoadMaLo();
             LoadMaNCC();
-            LoadMaNV(); //để tạm để test khi chưa đăng nhập
+            //LoadMaNV(); //để tạm để test khi chưa đăng nhập
+            cboMaNV.Text = maNhanVien;
+            txtTenNV.Text = tenNhanVien;
             isLoading = false;
         }
-        private void LoadMaNV()
-        {
-            DataTable dt = dp.GetDataTable("select * from tNhanVien");
-            ft.FillComBox(cboMaNV, dt, "MaNV", "MaNV");
-            cboMaNV.SelectedIndex = -1;
-        }
+        //private void LoadMaNV()
+        //{
+        //    DataTable dt = dp.GetDataTable("select * from tNhanVien");
+        //    ft.FillComBox(cboMaNV, dt, "MaNV", "MaNV");
+        //    cboMaNV.SelectedIndex = -1;
+        //}
         private void LoadMaHoaDon()
         {
             DataTable dt = dp.GetDataTable("select * from tHoaDonNhap");
@@ -57,7 +72,7 @@ namespace QuanLyNhaThuoc.HoaDon
         private void cboMaNCC_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (isLoading) return;
-            DataTable dt = dp.GetDataTable("SELECT * FROM tNhaCungCap");
+            DataTable dt = dp.GetDataTable("SELECT * FROM tNhaCungCap WHERE MaNCC = '" + cboMaNCC.Text + "'");
             if (dt.Rows.Count > 0)
             {
                 txtTenNCC.Text = dt.Rows[0]["TenNCC"].ToString();
@@ -154,6 +169,7 @@ namespace QuanLyNhaThuoc.HoaDon
                                 "', N'" + txtDiaChi.Text + "', '" + sdt + "')";
 
                 dp.ExecuteNonQuery(insert);
+                LoadMaNCC();
                 cboMaNCC.Text = newMa;
                 MessageBox.Show("Đã thêm nhà cung cấp mới!");
             }
@@ -198,8 +214,8 @@ namespace QuanLyNhaThuoc.HoaDon
             txtTenNCC.Clear();
             txtDiaChi.Clear();
             txtSDT.Clear();
-            cboMaNV.SelectedIndex = -1;
-            txtTenNV.Clear();
+            cboMaNV.Text = maNhanVien;
+            txtTenNV.Text = tenNhanVien;
             txtTongTien.Clear();
             cboMaLo.SelectedIndex = -1;
             txtTenThuoc.Clear();
@@ -273,19 +289,37 @@ namespace QuanLyNhaThuoc.HoaDon
         private void txtLuu_Click(object sender, EventArgs e)
         {
             string maHDN = txtMaHDN.Text.Trim();
-            string maNV = cboMaNV.SelectedValue?.ToString() ?? "";
+            string maNV = cboMaNV.Text.Trim();
             string maNCC = cboMaNCC.SelectedValue?.ToString() ?? "";
             DateTime ngayNhap = dtpNgayNhap.Value;
 
-            if (maHDN == "" || maNCC == "")
+            if (string.IsNullOrEmpty(maHDN) || string.IsNullOrEmpty(maNCC))
             {
-                MessageBox.Show("Vui lòng nhập đủ thông tin hóa đơn!");
+                MessageBox.Show("Vui lòng nhập đủ thông tin hóa đơn chung (Mã HĐN, Nhà Cung Cấp)!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if(dtpNgayNhap.Value.Date > DateTime.Now.Date)
+            if (dtpNgayNhap.Value.Date > DateTime.Now.Date)
             {
                 MessageBox.Show("Ngày nhập không được lớn hơn ngày hiện tại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dtpNgayNhap.Focus();
+                return;
+            }
+
+            // 1. Kiểm tra Mã Lô (cboMaLo.SelectedValue phải khác null)
+            if (cboMaLo.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng chọn Mã Lô thuốc cần nhập!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cboMaLo.Focus();
+                return;
+            }
+            if (string.IsNullOrEmpty(txtThanhTien.Text))
+            {
+                MessageBox.Show("Không thể tính Thành Tiền. Vui lòng kiểm tra lại Số Lượng và Đơn Giá Nhập.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (string.IsNullOrEmpty(txtSoLuongNhap.Text) || string.IsNullOrEmpty(txtThanhTien.Text))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin chi tiết hàng hóa!");
                 return;
             }
 
@@ -294,14 +328,21 @@ namespace QuanLyNhaThuoc.HoaDon
             DataTable dtCheck = dp.GetDataTable(sqlCheckHD);
             if (Convert.ToInt32(dtCheck.Rows[0][0]) == 0)
             {
-                string sqlInsertHD = $"INSERT INTO tHoaDonNhap VALUES ('{maHDN}', '{maNCC}', '{maNV}', '{ngayNhap:yyyy-MM-dd}', 0)";
+                // 1. Trường hợp 1: Hóa đơn CHƯA CÓ -> INSERT mới
+                string sqlInsertHD = $"INSERT INTO tHoaDonNhap VALUES ('{maHDN}', '{maNCC}', '{maNhanVien}', '{ngayNhap:yyyy-MM-dd}', 0)";
                 dp.ExecuteNonQuery(sqlInsertHD);
+                cboMaNV.Text = maNhanVien;
+                txtTenNV.Text = tenNhanVien;
             }
-            if (string.IsNullOrEmpty(txtSoLuongNhap.Text) || string.IsNullOrEmpty(txtThanhTien.Text))
+            else
             {
-                MessageBox.Show("Vui lòng nhập đầy đủ thông tin chi tiết hàng hóa!");
-                return;
+                // 2. Trường hợp 2: Hóa đơn ĐÃ CÓ -> UPDATE Mã NV sang người đang đăng nhập
+                string sqlUpdateNV = $"UPDATE tHoaDonNhap SET MaNV = '{maNhanVien}' WHERE MaHDN = '{maHDN}'";
+                dp.ExecuteNonQuery(sqlUpdateNV);
+                cboMaNV.Text = maNhanVien;
+                txtTenNV.Text = tenNhanVien;
             }
+            
             string sqlInsertCT = $"INSERT INTO tChiTietHDN (MaHDN, MaLo, SoLuongNhap, ThanhTien) " +
                          $"VALUES ('{maHDN}', '{cboMaLo.SelectedValue}', {txtSoLuongNhap.Text}, {txtThanhTien.Text})";
             dp.ExecuteNonQuery(sqlInsertCT);
