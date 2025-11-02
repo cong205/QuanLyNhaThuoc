@@ -15,17 +15,30 @@ namespace QuanLyNhaThuoc.HoaDon
     {
         Classes.DataProcesser dtp = new Classes.DataProcesser();
 
+        private string maNhanVien = "";
+        private string tenNhanVien = "";
         bool isLoading = false;
 
         public frmHoaDonBan()
         {
             InitializeComponent();
         }
+        public void setMaNV(string maNV)
+        {
+            maNhanVien = maNV;
+            string sql = "SELECT TenNV FROM tNhanVien WHERE MaNV = '" + maNV + "'";
+            DataTable dt = dtp.GetDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                tenNhanVien = dt.Rows[0]["TenNV"].ToString();
+            }
+        }
 
         private void frmHoaDonBan_Load(object sender, EventArgs e)
         {
             isLoading = true; // Bắt đầu load dữ liệu
-            // load dữ liệu lên combobox Mã hóa đơn
+
+            // 🔹 Load dữ liệu lên combobox Mã hóa đơn
             string strSQL = "SELECT MaHDB FROM tHoaDonBan";
             DataTable dt = dtp.GetDataTable(strSQL);
             cboTKMaHD.DisplayMember = "MaHDB";
@@ -35,7 +48,7 @@ namespace QuanLyNhaThuoc.HoaDon
             cboTKMaHD.DropDownStyle = ComboBoxStyle.DropDownList;
             cboTKMaHD.MaxDropDownItems = 5;
 
-            // load dữ liệu lên Ma hàng
+            // 🔹 Load dữ liệu lên combobox Mã hàng
             strSQL = "SELECT MaThuoc FROM tThuoc";
             DataTable dtMT = dtp.GetDataTable(strSQL);
             cboMaT.DataSource = dtMT;
@@ -44,28 +57,40 @@ namespace QuanLyNhaThuoc.HoaDon
             cboMaT.IntegralHeight = false;
             cboMaT.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMaT.MaxDropDownItems = 5;
-            isLoading = false; // Kết thúc load dữ liệu
 
-            dgvCTHDB.ReadOnly = true;
-
-            // load dữ liệu lên combobox Mã nhân viên
-            strSQL = "SELECT MaNV FROM tNhanVien";
+            // 🔹 Load dữ liệu lên combobox Mã nhân viên (PHẢI TRƯỚC khi gán mã NV đăng nhập)
+            strSQL = "SELECT MaNV, TenNV FROM tNhanVien";
             DataTable dtNV = dtp.GetDataTable(strSQL);
-            cboMaNV.DisplayMember = "MaNV";
             cboMaNV.DataSource = dtNV;
-            cboMaNV.SelectedIndex = -1;
+            cboMaNV.DisplayMember = "MaNV";
+            cboMaNV.ValueMember = "MaNV";
             cboMaNV.IntegralHeight = false;
             cboMaNV.DropDownStyle = ComboBoxStyle.DropDownList;
             cboMaNV.MaxDropDownItems = 5;
 
+            // 🔹 Nếu có nhân viên đăng nhập thì gán sẵn
+            if (!string.IsNullOrEmpty(maNhanVien))
+            {
+                cboMaNV.SelectedValue = maNhanVien; // ✅ Gán theo ValueMember
+                txtTenNV.Text = tenNhanVien;
+            }
+            else
+            {
+                cboMaNV.SelectedIndex = -1;
+                txtTenNV.Clear();
+            }
+
+            isLoading = false; // Kết thúc load dữ liệu
+
+            // 🔹 Một số thiết lập mặc định
+            dgvCTHDB.ReadOnly = true;
             btnHuyHD.Enabled = false;
             btnLuu.Enabled = false;
-
             txtTenNV.ReadOnly = true;
-            txtTenT.ReadOnly= true;
-            txtDonGia.ReadOnly= true;
-
+            txtTenT.ReadOnly = true;
+            txtDonGia.ReadOnly = true;
         }
+
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {

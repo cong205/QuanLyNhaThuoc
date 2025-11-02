@@ -253,6 +253,7 @@
             // 
             // txtTenNV
             // 
+            this.txtTenNV.Enabled = false;
             this.txtTenNV.Location = new System.Drawing.Point(142, 124);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(216, 22);
@@ -260,6 +261,7 @@
             // 
             // cboMaNV
             // 
+            this.cboMaNV.Enabled = false;
             this.cboMaNV.FormattingEnabled = true;
             this.cboMaNV.Location = new System.Drawing.Point(141, 85);
             this.cboMaNV.Name = "cboMaNV";

@@ -80,6 +80,7 @@ namespace QuanLyNhaThuoc
         private void mnuHoaDonBan_Click(object sender, EventArgs e)
         {
             frmHoaDonBan hdb = new frmHoaDonBan();
+            hdb.setMaNV(maNhanVien);
             hdb.ShowDialog();
 
         }
