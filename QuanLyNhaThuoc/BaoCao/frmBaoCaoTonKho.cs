@@ -15,11 +15,22 @@ namespace QuanLyNhaThuoc.BaoCao
     {
         Classes.DataProcesser dp = new Classes.DataProcesser();
 
+        private string maNhanVien = "";
+        private string tenNhanVien = "";
         public frmBaoCaoTonKho()
         {
             InitializeComponent();
         }
-
+        public void setMaNV(string maNV)
+        {
+            maNhanVien = maNV;
+            string sql = "SELECT * FROM tNhanVien WHERE MaNV = '" + maNV + "'";
+            DataTable dt = dp.GetDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                tenNhanVien = dt.Rows[0]["TenNV"].ToString();
+            }
+        }
         private void frmBaoCaoTonKho_Load(object sender, EventArgs e)
         {
             // Load danh sách nhân viên
@@ -29,7 +40,17 @@ namespace QuanLyNhaThuoc.BaoCao
             cboMaNhanVien.DisplayMember = "MaNV";
             cboMaNhanVien.ValueMember = "MaNV";
             cboMaNhanVien.SelectedIndex = -1;
-
+            // 🔹 Nếu có nhân viên đăng nhập thì gán sẵn
+            if (!string.IsNullOrEmpty(maNhanVien))
+            {
+                cboMaNhanVien.SelectedValue = maNhanVien;
+                txtTenNhanVien.Text = tenNhanVien;
+            }
+            else
+            {
+                cboMaNhanVien.SelectedIndex = -1;
+                txtTenNhanVien.Clear();
+            }
             // Mặc định ngày lập hôm nay
             dtpNgayLap.Value = DateTime.Now;
         }

@@ -61,6 +61,7 @@
             // 
             // txtTenNhanVien
             // 
+            this.txtTenNhanVien.Enabled = false;
             this.txtTenNhanVien.Location = new System.Drawing.Point(472, 92);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(200, 22);
@@ -87,6 +88,7 @@
             // 
             // cboMaNhanVien
             // 
+            this.cboMaNhanVien.Enabled = false;
             this.cboMaNhanVien.FormattingEnabled = true;
             this.cboMaNhanVien.Location = new System.Drawing.Point(472, 55);
             this.cboMaNhanVien.Name = "cboMaNhanVien";

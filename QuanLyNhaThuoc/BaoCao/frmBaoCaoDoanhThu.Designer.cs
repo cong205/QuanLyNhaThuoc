@@ -36,6 +36,7 @@
             this.dtpTimeStart = new System.Windows.Forms.DateTimePicker();
             this.dtpTimeEnd = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnHuyBo = new System.Windows.Forms.Button();
             this.txtTenNhanVien = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@
             this.dtpNgayLap = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.btnExcel = new System.Windows.Forms.Button();
-            this.btnHuyBo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoDoanhThu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -140,8 +140,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnHuyBo
+            // 
+            this.btnHuyBo.Location = new System.Drawing.Point(638, 155);
+            this.btnHuyBo.Name = "btnHuyBo";
+            this.btnHuyBo.Size = new System.Drawing.Size(103, 46);
+            this.btnHuyBo.TabIndex = 16;
+            this.btnHuyBo.Text = "Hủy bỏ";
+            this.btnHuyBo.UseVisualStyleBackColor = true;
+            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
+            // 
             // txtTenNhanVien
             // 
+            this.txtTenNhanVien.Enabled = false;
             this.txtTenNhanVien.Location = new System.Drawing.Point(472, 92);
             this.txtTenNhanVien.Name = "txtTenNhanVien";
             this.txtTenNhanVien.Size = new System.Drawing.Size(200, 22);
@@ -168,6 +179,7 @@
             // 
             // cboMaNhanVien
             // 
+            this.cboMaNhanVien.Enabled = false;
             this.cboMaNhanVien.FormattingEnabled = true;
             this.cboMaNhanVien.Location = new System.Drawing.Point(472, 55);
             this.cboMaNhanVien.Name = "cboMaNhanVien";
@@ -212,16 +224,6 @@
             this.btnExcel.Text = "xuất excel";
             this.btnExcel.UseVisualStyleBackColor = true;
             this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
-            // 
-            // btnHuyBo
-            // 
-            this.btnHuyBo.Location = new System.Drawing.Point(638, 155);
-            this.btnHuyBo.Name = "btnHuyBo";
-            this.btnHuyBo.Size = new System.Drawing.Size(103, 46);
-            this.btnHuyBo.TabIndex = 16;
-            this.btnHuyBo.Text = "Hủy bỏ";
-            this.btnHuyBo.UseVisualStyleBackColor = true;
-            this.btnHuyBo.Click += new System.EventHandler(this.btnHuyBo_Click);
             // 
             // frmBaoCaoDoanhThu
             // 

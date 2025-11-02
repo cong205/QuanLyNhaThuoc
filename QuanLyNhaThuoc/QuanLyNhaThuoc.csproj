@@ -94,7 +94,7 @@
     <Compile Include="DanhMuc\frmLoThuoc.Designer.cs">
       <DependentUpon>frmLoThuoc.cs</DependentUpon>
     </Compile>
-   <Compile Include="DanhMuc\frmDangNhap.cs">
+    <Compile Include="DanhMuc\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DanhMuc\frmDangNhap.Designer.cs">
@@ -140,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaoCao\frmBaoCaoDoanhThu.resx">
       <DependentUpon>frmBaoCaoDoanhThu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\frmBaoCaoNhapHang.resx">
+      <DependentUpon>frmBaoCaoNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\frmBaoCaoTonKho.resx">
       <DependentUpon>frmBaoCaoTonKho.cs</DependentUpon>
