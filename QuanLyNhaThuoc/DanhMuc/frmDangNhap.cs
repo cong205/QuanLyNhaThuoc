@@ -59,6 +59,12 @@ namespace QuanLyNhaThuoc.DanhMuc
             txtMatKhau.Text = "";
         }
 
+        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            // Đảo trạng thái ẩn/hiện mật khẩu
+            txtMatKhau.UseSystemPasswordChar = !((CheckBox)sender).Checked;
+        }
+
         private void frmDangNhap_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult r = MessageBox.Show(

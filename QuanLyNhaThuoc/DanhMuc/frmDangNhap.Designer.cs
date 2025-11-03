@@ -36,6 +36,7 @@ namespace QuanLyNhaThuoc.DanhMuc
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.chkShowPassword = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +75,7 @@ namespace QuanLyNhaThuoc.DanhMuc
             // 
             this.groupBox1.Controls.Add(this.btnCancel);
             this.groupBox1.Controls.Add(this.btnLogin);
+            this.groupBox1.Controls.Add(this.chkShowPassword);
             this.groupBox1.Controls.Add(this.txtMatKhau);
             this.groupBox1.Controls.Add(this.txtTenDangNhap);
             this.groupBox1.Controls.Add(this.pictureBox1);
@@ -99,8 +101,21 @@ namespace QuanLyNhaThuoc.DanhMuc
             this.txtMatKhau.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMatKhau.Location = new System.Drawing.Point(170, 114);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.Size = new System.Drawing.Size(241, 35);
             this.txtMatKhau.TabIndex = 3;
+            // 
+            // chkShowPassword
+            // 
+            this.chkShowPassword.AutoSize = true;
+            this.chkShowPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkShowPassword.Location = new System.Drawing.Point(170, 155);
+            this.chkShowPassword.Name = "chkShowPassword";
+            this.chkShowPassword.Size = new System.Drawing.Size(112, 20);
+            this.chkShowPassword.TabIndex = 6;
+            this.chkShowPassword.Text = "Hiện mật khẩu";
+            this.chkShowPassword.UseVisualStyleBackColor = true;
+            this.chkShowPassword.CheckedChanged += new System.EventHandler(this.chkShowPassword_CheckedChanged);
             // 
             // btnLogin
             // 
@@ -154,5 +169,6 @@ namespace QuanLyNhaThuoc.DanhMuc
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtMatKhau;
+        private System.Windows.Forms.CheckBox chkShowPassword;
     }
 }
