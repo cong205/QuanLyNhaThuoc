@@ -98,6 +98,12 @@ namespace QuanLyNhaThuoc.DanhMuc
                 txtSLT.Focus();
                 return;
             }
+            if (!int.TryParse(txtSLT.Text.Trim(), out int soLuongTon) || soLuongTon < 0)
+            {
+                MessageBox.Show("Số lượng tồn phải là số nguyên không âm","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                txtSLT.Focus();
+                return;
+            }
             
             if (btnThem.Enabled == true)
             {
@@ -110,7 +116,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                 }
                 dp.ExecuteNonQuery("INSERT INTO tLoThuoc (MaLo, MaThuoc, NgaySanXuat, HanSuDung, SoLuongTon) " +
                     "VALUES ('" + txtMaLo.Text + "', '" + cboMaThuoc.Text + "', '" + dtpNSX.Value.ToString("yyyy-MM-dd") + "', '" +
-                    dtpHSD.Value.ToString("yyyy-MM-dd") + "', " + txtSLT.Text + ")");
+                    dtpHSD.Value.ToString("yyyy-MM-dd") + "', " + soLuongTon + ")");
                 MessageBox.Show("Thêm lô thuốc thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             if(btnSua.Enabled == true)
@@ -118,7 +124,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                 dp.ExecuteNonQuery("UPDATE tLoThuoc SET MaThuoc = '" + cboMaThuoc.Text + 
                     "', NgaySanXuat = '" + dtpNSX.Value.ToString("yyyy-MM-dd") + 
                     "', HanSuDung = '" + dtpHSD.Value.ToString("yyyy-MM-dd") + 
-                    "', SoLuongTon = " + txtSLT.Text + 
+                    "', SoLuongTon = " + soLuongTon + 
                     " WHERE MaLo = '" + txtMaLo.Text + "'");
                 MessageBox.Show("Cập nhật lô thuốc thành công.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

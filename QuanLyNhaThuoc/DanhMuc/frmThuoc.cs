@@ -76,6 +76,26 @@ namespace QuanLyNhaThuoc.DanhMuc
                 MessageBox.Show("Giá nhập và giá bán phải là số!");
                 return;
             }
+            if (giaNhap < 0 || giaBan < 0)
+            {
+                MessageBox.Show("Giá không được âm!");
+                return;
+            }
+            if (giaBan < giaNhap)
+            {
+                MessageBox.Show("Giá bán không được nhỏ hơn giá nhập!");
+                return;
+            }
+            if (!int.TryParse(txtSoLuongTon.Text, out int soLuongTon) || soLuongTon < 0)
+            {
+                MessageBox.Show("Số lượng tồn phải là số nguyên không âm!");
+                return;
+            }
+            if (dtpHanSD.Value <= dtpNgaySX.Value)
+            {
+                MessageBox.Show("Hạn sử dụng phải lớn hơn ngày sản xuất!");
+                return;
+            }
 
             string trangThai = rdoConHang.Checked ? "Còn hàng" : "Hết hàng";
 
@@ -122,7 +142,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                 // Thêm vào tLoThuoc
                 string sqlInsertLo = $@"
             INSERT INTO tLoThuoc (MaLo, MaThuoc, SoLuongTon, NgaySanXuat, HanSuDung)
-            VALUES ('{newMaLo}', '{txtMaThuoc.Text}', {txtSoLuongTon.Text}, 
+            VALUES ('{newMaLo}', '{txtMaThuoc.Text}', {soLuongTon}, 
                     '{dtpNgaySX.Value:yyyy-MM-dd}', '{dtpHanSD.Value:yyyy-MM-dd}')";
                 dp.ExecuteNonQuery(sqlInsertLo);
 

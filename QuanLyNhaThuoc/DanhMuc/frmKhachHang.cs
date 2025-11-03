@@ -108,10 +108,31 @@ namespace QuanLyNhaThuoc.DanhMuc
                 txtMaKhach.Focus();
                 return;
             }
+            // Định dạng mã KH: KH + 2-4 chữ số
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtMaKhach.Text.Trim(), "^KH\\d{2,4}$"))
+            {
+                MessageBox.Show("Mã khách hàng không hợp lệ (định dạng KHxx)");
+                txtMaKhach.Focus();
+                return;
+            }
             if (txtTenKhach.Text == "")
             {
                 MessageBox.Show("Vui lòng nhập tên khách hàng!");
                 txtTenKhach.Focus();
+                return;
+            }
+            // Kiểm tra ngày sinh không vượt quá hiện tại
+            if (dtpNgaySinh.Value.Date > DateTime.Now.Date)
+            {
+                MessageBox.Show("Ngày sinh không được lớn hơn ngày hiện tại!");
+                dtpNgaySinh.Focus();
+                return;
+            }
+            // Kiểm tra số điện thoại VN cơ bản (0 và 10-11 số)
+            if (!string.IsNullOrWhiteSpace(txtDienThoai.Text) && !System.Text.RegularExpressions.Regex.IsMatch(txtDienThoai.Text.Trim(), "^0\\d{9,10}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và 10-11 số)");
+                txtDienThoai.Focus();
                 return;
             }
 

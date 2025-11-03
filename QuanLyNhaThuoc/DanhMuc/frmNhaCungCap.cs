@@ -54,6 +54,14 @@ namespace QuanLyNhaThuoc.DanhMuc
             {
                 MessageBox.Show("Mã và Tên nhà cung cấp không được bỏ trống!"); return;
             }
+            // Validate số điện thoại (bắt đầu bằng 0 và 10-11 số)
+            string phone = txtSoDT.Text.Trim();
+            if (!string.IsNullOrWhiteSpace(phone) && !System.Text.RegularExpressions.Regex.IsMatch(phone, "^0\\d{9,10}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và 10-11 số)");
+                txtSoDT.Focus();
+                return;
+            }
             string sql = $"INSERT INTO tNhaCungCap (MaNCC, TenNCC, DiaChi, SoDienThoai) VALUES (N'{txtMaNCC.Text}', N'{txtTenNCC.Text}', N'{txtDiaChi.Text}', N'{txtSoDT.Text}')";
             try { dp.ExecuteNonQuery(sql); LoadData(); btnLamMoi_Click(null, null); }
             catch(Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }
@@ -61,6 +69,14 @@ namespace QuanLyNhaThuoc.DanhMuc
         private void btnSua_Click(object sender, EventArgs e)
         {
             if(selectedMaNCC == "") { MessageBox.Show("Chọn nhà cung cấp để sửa!"); return; }
+            // Validate số điện thoại
+            string phone = txtSoDT.Text.Trim();
+            if (!string.IsNullOrWhiteSpace(phone) && !System.Text.RegularExpressions.Regex.IsMatch(phone, "^0\\d{9,10}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và 10-11 số)");
+                txtSoDT.Focus();
+                return;
+            }
             string sql = $"UPDATE tNhaCungCap SET TenNCC=N'{txtTenNCC.Text}', DiaChi=N'{txtDiaChi.Text}', SoDienThoai=N'{txtSoDT.Text}' WHERE MaNCC=N'{selectedMaNCC}'";
             try { dp.ExecuteNonQuery(sql); LoadData(); btnLamMoi_Click(null, null); }
             catch(Exception ex) { MessageBox.Show("Lỗi: " + ex.Message); }

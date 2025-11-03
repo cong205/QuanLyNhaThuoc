@@ -132,6 +132,13 @@ namespace QuanLyNhaThuoc
                 txtSDT.Focus();
                 return;
             }
+            // Validate SDT: 0 và 10-11 số
+            if (!System.Text.RegularExpressions.Regex.IsMatch(sdt, "^0\\d{9,10}$"))
+            {
+                MessageBox.Show("Số điện thoại không hợp lệ (phải bắt đầu bằng 0 và 10-11 số)");
+                txtSDT.Focus();
+                return;
+            }
 
             if (string.IsNullOrWhiteSpace(diaChi))
             {
@@ -163,6 +170,12 @@ namespace QuanLyNhaThuoc
             if (string.IsNullOrWhiteSpace(matKhau))
             {
                 MessageBox.Show("Bạn phải nhập mật khẩu");
+                txtPW.Focus();
+                return;
+            }
+            else if (matKhau.Length < 4)
+            {
+                MessageBox.Show("Mật khẩu tối thiểu 4 ký tự");
                 txtPW.Focus();
                 return;
             }
