@@ -17,6 +17,7 @@ namespace QuanLyNhaThuoc.DanhMuc
         public frmLoThuoc()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
 
         private void frmLoThuoc_Load(object sender, EventArgs e)
@@ -26,6 +27,7 @@ namespace QuanLyNhaThuoc.DanhMuc
             cboMaThuoc.SelectedIndex = -1;
             DataTable dtLoThuoc = dp.GetDataTable("SELECT * FROM tLoThuoc");
             dgvLoThuoc.DataSource = dtLoThuoc;
+            Classes.UiTheme.ApplyGrid(dgvLoThuoc);
 
             dgvLoThuoc.Columns["MaLo"].HeaderText = "Mã Lô Thuốc";
             dgvLoThuoc.Columns["MaThuoc"].HeaderText = "Mã Thuốc";

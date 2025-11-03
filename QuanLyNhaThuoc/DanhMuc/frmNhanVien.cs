@@ -16,6 +16,7 @@ namespace QuanLyNhaThuoc
         public frmNhanVien()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
         private void fillChucVu()
         {
@@ -28,6 +29,7 @@ namespace QuanLyNhaThuoc
             fillChucVu();
             DataTable dt = dp.GetDataTable("select * from tNhanVien");
             dgvNV.DataSource = dt;
+            Classes.UiTheme.ApplyGrid(dgvNV);
 
             dgvNV.Columns[0].HeaderText = "Mã nhân viên";
             dgvNV.Columns[1].HeaderText = "Tên nhân viên";

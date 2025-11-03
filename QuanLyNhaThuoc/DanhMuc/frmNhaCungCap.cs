@@ -18,6 +18,7 @@ namespace QuanLyNhaThuoc.DanhMuc
         public frmNhaCungCap()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {

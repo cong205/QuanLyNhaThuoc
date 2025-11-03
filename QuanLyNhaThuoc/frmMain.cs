@@ -28,11 +28,19 @@ namespace QuanLyNhaThuoc
         public frmMain()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            // Ensure theme also applies to runtime-created controls
+            foreach (Control c in this.Controls)
+            {
+                if (c is DataGridView dgv)
+                {
+                    Classes.UiTheme.ApplyGrid(dgv);
+                }
+            }
         }
 
         private void mnuKhachHang_Click(object sender, EventArgs e)

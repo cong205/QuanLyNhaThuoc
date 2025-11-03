@@ -21,6 +21,7 @@ namespace QuanLyNhaThuoc.DanhMuc
         public frmThuoc()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -508,6 +509,7 @@ namespace QuanLyNhaThuoc.DanhMuc
                            FROM tThuoc";
             DataTable dt = dp.GetDataTable(sql);
             dgvThuoc.DataSource = dt;
+            Classes.UiTheme.ApplyGrid(dgvThuoc);
 
             dgvThuoc.Columns["MaThuoc"].HeaderText = "Mã thuốc";
             dgvThuoc.Columns["TenThuoc"].HeaderText = "Tên thuốc";

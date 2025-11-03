@@ -20,6 +20,7 @@ namespace QuanLyNhaThuoc.BaoCao
         public frmBaoCaoTonKho()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
         public void setMaNV(string maNV)
         {

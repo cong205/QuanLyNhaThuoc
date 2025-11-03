@@ -22,6 +22,7 @@ namespace QuanLyNhaThuoc.HoaDon
         public frmHoaDonBan()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
         public void setMaNV(string maNV)
         {

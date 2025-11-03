@@ -17,11 +17,15 @@ namespace QuanLyNhaThuoc.DanhMuc
         public frmKhachHang()
         {
             InitializeComponent();
+            Classes.UiTheme.Apply(this);
         }
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
             LoadData();
+            // Apply theme to grid if present
+            if (dgvKhachHang != null)
+                Classes.UiTheme.ApplyGrid(dgvKhachHang);
         }
 
         void LoadData()
