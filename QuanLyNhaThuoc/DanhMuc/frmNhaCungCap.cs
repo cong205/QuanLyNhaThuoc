@@ -28,6 +28,25 @@ namespace QuanLyNhaThuoc.DanhMuc
         {
             string sql = "SELECT MaNCC, TenNCC, DiaChi, SoDienThoai FROM tNhaCungCap";
             dgvNCC.DataSource = dp.GetDataTable(sql);
+            
+            // Thiết lập chiều rộng các cột để loại bỏ khoảng trắng
+            if (dgvNCC.Columns.Count >= 4)
+            {
+                // Ẩn row headers để có thêm không gian
+                dgvNCC.RowHeadersVisible = false;
+                
+                // Thiết lập FillWeight cho từng cột (tỷ lệ phân chia không gian)
+                dgvNCC.Columns["MaNCC"].FillWeight = 15;      // 15% cho Mã
+                dgvNCC.Columns["TenNCC"].FillWeight = 35;       // 35% cho Tên  
+                dgvNCC.Columns["DiaChi"].FillWeight = 30;       // 30% cho Địa chỉ
+                dgvNCC.Columns["SoDienThoai"].FillWeight = 20;  // 20% cho SĐT
+                
+                // Đặt tất cả các cột ở chế độ Fill để tự động chia đều không gian
+                foreach (DataGridViewColumn column in dgvNCC.Columns)
+                {
+                    column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                }
+            }
         }
         private void btnThem_Click(object sender, EventArgs e)
         {

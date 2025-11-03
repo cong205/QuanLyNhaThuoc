@@ -112,6 +112,9 @@
             this.btnLamMoi.UseVisualStyleBackColor = true;
             this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
             // dgvNCC
+            this.dgvNCC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNCC.Location = new System.Drawing.Point(33, 180);
             this.dgvNCC.Name = "dgvNCC";
@@ -120,6 +123,7 @@
             this.dgvNCC.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNCC.MultiSelect = false;
             this.dgvNCC.ReadOnly = true;
+            this.dgvNCC.RowHeadersVisible = false;
             this.dgvNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNCC_CellClick);
             // frmNhaCungCap
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
